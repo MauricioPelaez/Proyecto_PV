@@ -868,7 +868,7 @@
             this.Controls.Add(this.pnl_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(980, 680);
+            this.MinimumSize = new System.Drawing.Size(898, 680);
             this.Name = "GUI_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Principal";

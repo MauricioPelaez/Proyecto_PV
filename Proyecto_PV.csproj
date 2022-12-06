@@ -79,6 +79,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionDB\ConexionSQL.cs" />
+    <Compile Include="ConexionDB\INIFile.cs" />
+    <Compile Include="ConexionDB\Ruta.cs" />
     <Compile Include="Datos_Staticos\Global.cs" />
     <Compile Include="Formularios\GUI_Bodegas.cs">
       <SubType>Form</SubType>
@@ -162,9 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Proyecto_PV_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

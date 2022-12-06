@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using System.Windows;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Proyecto_PV.Datos_Staticos;
@@ -15,6 +13,7 @@ namespace Proyecto_PV.Views
         public Login()
         {
             InitializeComponent();
+            txtUser.Focus();
         }
 
         #region ver Contraseña
@@ -125,58 +124,70 @@ namespace Proyecto_PV.Views
         #region Base de datos
 
         MySqlConnection conexion = new MySqlConnection();
-        public void Conectar()
+        ConexionDB.ConexionSQL conexionSQL = new ConexionDB.ConexionSQL();
+
+        #region Iniciar Sesion
+        private void IniciarSesion()
         {
             try
             {
-                conexion.ConnectionString = "server=localhost;user=root;password=1005771207;database=proyecto(pv)";
-                conexion.Open();
+                conexion.ConnectionString = conexionSQL.Conectar();
+                if(conexion.State == ConnectionState.Closed) 
+                {
+                    conexion.Open();
+                }
+                
+                string cadena = "SELECT `Usuario`, `Contraseña` FROM `login` WHERE `Usuario` = @user AND `Contraseña` = @pass";
+                MySqlCommand comando = new MySqlCommand(cadena, conexion);
+                comando.Parameters.Add("@user", MySqlDbType.VarChar).Value = txtUser.Text;
+                comando.Parameters.Add("@pass", MySqlDbType.VarChar).Value = txtPass.Text;
+                comando.CommandTimeout = 60;
+
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                if (tabla.Rows.Count == 0)
+                {
+                    lbl_Validacion.Visible = true;
+                    txtUser.Text = "";
+                    txtPass.Text = "";
+                    txtUser.Focus();
+                    btn_Iniciar.BackColor = Color.FromArgb(5, 0, 10);
+                    lbl_UserIng.Visible = false;
+                    lbl_TipoUserIng.Visible = false;
+                }
+                else
+                {
+
+                    GUI_Principal ventana = new GUI_Principal();
+                    ventana.Show();
+                    this.Close();
+
+                    if (conexion.State == ConnectionState.Open)
+                    {
+                        conexion.Close();
+                    }
+
+                }
             }
-            catch (SqlException ex)
+            catch(MySqlException ex)
             {
-                string mensaje = "Error al conectar con la base de datos";
-                string titulo = "Error de conexion";
-                MessageBoxButton boton = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.Error;
-                MessageBoxResult resultado;
-
-                resultado = System.Windows.MessageBox.Show(mensaje, titulo, boton, icon);
-                System.Windows.MessageBox.Show(ex.ToString(), "Error detectado...");
-            }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            Conectar();
-            txtUser.Focus();
-        }
-
-        public void IniciarSesion()
-        {
-            MySqlCommand comando = new MySqlCommand("SELECT `Usuario`, `Contraseña` FROM `login` WHERE `Usuario` = @user AND `Contraseña` = @pass", conexion);
-
-            comando.Parameters.Add("@user", MySqlDbType.VarChar).Value = txtUser.Text;
-            comando.Parameters.Add("@pass", MySqlDbType.VarChar).Value = txtPass.Text;
-
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
-            
-            if (tabla.Rows.Count == 0)
-            {
-                lbl_Validacion.Visible = true;
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                conexion.Close();
                 txtUser.Text = "";
                 txtPass.Text = "";
                 txtUser.Focus();
+                lbl_UserIng.Visible = false;
+                lbl_TipoUserIng.Visible = false;
                 btn_Iniciar.BackColor = Color.FromArgb(5, 0, 10);
             }
-            else
-            {
-                GUI_Principal ventana = new GUI_Principal();
-                ventana.Show();
-                conexion.Close();
-                this.Close();
-            }
+
+        }
+
+        private void btn_Iniciar_Click(object sender, EventArgs e)
+        {
+            IniciarSesion();
         }
 
         private void btn_Iniciar_KeyPress(object sender, KeyPressEventArgs e)
@@ -188,11 +199,22 @@ namespace Proyecto_PV.Views
             }
         }
 
+        #endregion
+
+        #region Ver nombre y tipo del usuario ingresado
         private void txtUser_TextChanged_1(object sender, EventArgs e)
         {
+            conexion.ConnectionString = conexionSQL.Conectar();
+            if (conexion.State == ConnectionState.Closed)
+            {
+                conexion.Open();
+            }
+
             //Mostrar nombre del usuario ingresado
-            MySqlCommand command = new MySqlCommand("SELECT `Nombre` FROM `login` WHERE `Usuario` = @user", conexion);
+            string cadena = "SELECT `Nombre` FROM `login` WHERE `Usuario` = @user";
+            MySqlCommand command = new MySqlCommand(cadena, conexion);
             command.Parameters.Add("@user", MySqlDbType.VarChar).Value = txtUser.Text;
+            command.CommandTimeout= 60;
             lbl_UserIng.Text = Convert.ToString(command.ExecuteScalar());
             lbl_UserIng.Visible = true;
 
@@ -204,12 +226,14 @@ namespace Proyecto_PV.Views
 
             Global.usuarioLog = lbl_UserIng.Text;
             Global.tipoUsuarioLog = lbl_TipoUserIng.Text;
+
+            if (conexion.State == ConnectionState.Open)
+            {
+                conexion.Close();
+            }
         }
 
-        private void btn_Iniciar_Click(object sender, EventArgs e)
-        {
-            IniciarSesion();
-        }
+        #endregion
 
         #endregion
 

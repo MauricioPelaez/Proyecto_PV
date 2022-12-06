@@ -1,16 +1,9 @@
 ﻿using Proyecto_PV.Datos_Staticos;
 using Proyecto_PV.Formularios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 
 namespace Proyecto_PV.Views

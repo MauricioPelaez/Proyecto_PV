@@ -21,7 +21,7 @@ namespace Proyecto_PV.Formularios
             InitializeComponent();       
             Conectar();
             Tabla();
-     
+            System.Diagnostics.Debug.WriteLine("hola");
         }
 
         #region Color borde del GroupBox    
@@ -247,8 +247,9 @@ namespace Proyecto_PV.Formularios
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Error en la busqueda dinamica de las bodegas...");
-                Console.WriteLine(ex.ToString());
+                System.Diagnostics.Debug.WriteLine("Error en la busqueda dinamica de las bodegas...");
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+                
             }
 
             NRegistros();
