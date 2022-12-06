@@ -36,15 +36,16 @@
             this.img_Splash = new System.Windows.Forms.PictureBox();
             this.pnl_Splash = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.img_Splash)).BeginInit();
+            this.pnl_Splash.SuspendLayout();
             this.SuspendLayout();
             // 
             // barra_Progreso
             // 
             this.barra_Progreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.barra_Progreso.ForeColor = System.Drawing.Color.Orange;
-            this.barra_Progreso.Location = new System.Drawing.Point(0, 246);
+            this.barra_Progreso.ForeColor = System.Drawing.Color.Transparent;
+            this.barra_Progreso.Location = new System.Drawing.Point(0, 251);
             this.barra_Progreso.Name = "barra_Progreso";
-            this.barra_Progreso.Size = new System.Drawing.Size(742, 15);
+            this.barra_Progreso.Size = new System.Drawing.Size(742, 17);
             this.barra_Progreso.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barra_Progreso.TabIndex = 1;
             // 
@@ -59,7 +60,7 @@
             this.lbl_Carga.AutoSize = true;
             this.lbl_Carga.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Carga.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Carga.Location = new System.Drawing.Point(0, 224);
+            this.lbl_Carga.Location = new System.Drawing.Point(0, 229);
             this.lbl_Carga.Name = "lbl_Carga";
             this.lbl_Carga.Size = new System.Drawing.Size(45, 19);
             this.lbl_Carga.TabIndex = 2;
@@ -77,10 +78,13 @@
             // 
             // pnl_Splash
             // 
+            this.pnl_Splash.Controls.Add(this.lbl_Carga);
+            this.pnl_Splash.Controls.Add(this.barra_Progreso);
+            this.pnl_Splash.Controls.Add(this.img_Splash);
             this.pnl_Splash.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Splash.Location = new System.Drawing.Point(0, 0);
             this.pnl_Splash.Name = "pnl_Splash";
-            this.pnl_Splash.Size = new System.Drawing.Size(560, 267);
+            this.pnl_Splash.Size = new System.Drawing.Size(560, 274);
             this.pnl_Splash.TabIndex = 3;
             // 
             // Splash
@@ -89,10 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(560, 267);
-            this.Controls.Add(this.lbl_Carga);
-            this.Controls.Add(this.img_Splash);
-            this.Controls.Add(this.barra_Progreso);
+            this.ClientSize = new System.Drawing.Size(560, 274);
             this.Controls.Add(this.pnl_Splash);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -104,8 +105,9 @@
             this.Text = "SPLASH";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             ((System.ComponentModel.ISupportInitialize)(this.img_Splash)).EndInit();
+            this.pnl_Splash.ResumeLayout(false);
+            this.pnl_Splash.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

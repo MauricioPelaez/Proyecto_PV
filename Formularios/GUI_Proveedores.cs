@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Proyecto_PV.ConexionDB;
 using Proyecto_PV.Datos_Staticos;
 using Proyecto_PV.Views;
 using System;
@@ -20,7 +21,6 @@ namespace Proyecto_PV.Formularios
         public GUI_Proveedores()
         {
             InitializeComponent();
-            Conectar();
             Tabla();
         }
 
@@ -158,10 +158,12 @@ namespace Proyecto_PV.Formularios
 
                 if (conexion.State == ConnectionState.Closed)
                 {
+                    conexion.ConnectionString = conexionSQL.Conectar();
                     conexion.Open();
                 }
 
-                MySqlCommand command = new MySqlCommand("SELECT `id` FROM `proveedor` WHERE `nit_prov` = @nit", conexion);
+                string query = "SELECT `id` FROM `proveedor` WHERE `nit_prov` = @nit";
+                MySqlCommand command = new MySqlCommand(query, conexion);
                 command.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text;
                 Global.id_proveedor = Convert.ToString(command.ExecuteScalar());
 
@@ -214,41 +216,23 @@ namespace Proyecto_PV.Formularios
 
         #region Base de Datos
 
-        #region Conexion BD
         MySqlConnection conexion = new MySqlConnection();
-        public void Conectar()
-        {
-            try
-            {
-                conexion.ConnectionString = "server=localhost;user=root;password=1005771207;database=proyecto(pv)";
-                conexion.Open();
-            }
-            catch (SqlException ex)
-            {
-                string mensaje = "Error al conectar con la base de datos";
-                string titulo = "Error de conexion";
-                MessageBoxButton boton = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.Error;
-                MessageBoxResult resultado;
-
-                resultado = System.Windows.MessageBox.Show(mensaje, titulo, boton, icon);
-                System.Windows.MessageBox.Show(ex.ToString(), "Error detectado...");
-            }
-        }
-        #endregion
+        ConexionDB.ConexionSQL conexionSQL = new ConexionDB.ConexionSQL();
 
         #region Llenar tabla
         private DataTable LlenarTabla()
         {
             if (conexion.State == ConnectionState.Closed)
             {
+                conexion.ConnectionString = conexionSQL.Conectar();
                 conexion.Open();
             }
 
             DataTable dt = new DataTable();
             try
             {
-                MySqlCommand comando = new MySqlCommand("SELECT `nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov` FROM `proveedor`", conexion);
+                string query = "SELECT `nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov` FROM `proveedor`";
+                MySqlCommand comando = new MySqlCommand(query, conexion);
                 comando.CommandTimeout = 60;
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
@@ -274,10 +258,12 @@ namespace Proyecto_PV.Formularios
         {
             if (conexion.State == ConnectionState.Closed)
             {
+                conexion.ConnectionString = conexionSQL.Conectar();
                 conexion.Open();
             }
 
-            MySqlCommand comando = new MySqlCommand("SELECT `nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov` FROM `proveedor` WHERE `nit_prov` LIKE '%" + txt_Buscar.Text + "%' Or `nom_provee` LIKE '%" + txt_Buscar.Text + "%' Or `mail_prov` LIKE '%" + txt_Buscar.Text + "%' Or `tel_prov` LIKE '%" + txt_Buscar.Text + "%' Or `func_prov` LIKE '%" + txt_Buscar.Text + "%'", conexion);
+            string query = "SELECT `nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov` FROM `proveedor` WHERE `nit_prov` LIKE '%" + txt_Buscar.Text + "%' Or `nom_provee` LIKE '%" + txt_Buscar.Text + "%' Or `mail_prov` LIKE '%" + txt_Buscar.Text + "%' Or `tel_prov` LIKE '%" + txt_Buscar.Text + "%' Or `func_prov` LIKE '%" + txt_Buscar.Text + "%'";
+            MySqlCommand comando = new MySqlCommand(query, conexion);
             MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
 
             DataSet datos = new DataSet();
@@ -322,6 +308,7 @@ namespace Proyecto_PV.Formularios
         {
             if (conexion.State == ConnectionState.Closed)
             {
+                conexion.ConnectionString = conexionSQL.Conectar();
                 conexion.Open();
             }
             if (txt_Nit.Text == "" || txt_NombreProv.Text == "" || txt_EmailProv.Text == "" || txt_TelefonoProv.Text == "" || combo_FuncionProv.SelectedIndex == 0)
@@ -338,7 +325,8 @@ namespace Proyecto_PV.Formularios
             }
             else
             {
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `proveedor` WHERE `nit_prov` = @nit", conexion);
+                string query = "SELECT * FROM `proveedor` WHERE `nit_prov` = @nit";
+                MySqlCommand command = new MySqlCommand(query, conexion);
                 command.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text;
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
@@ -363,7 +351,8 @@ namespace Proyecto_PV.Formularios
                 {
                     try
                     {
-                        MySqlCommand comando = new MySqlCommand("INSERT INTO `proveedor`(`nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov`, `fecha_insert`, `user_insert`, `fecha_update`, `user_update`) VALUES (@nit, @nombre, @mail, @phone, @func, @fecha, @user, @fecha, @user)", conexion);
+                        string insert = "INSERT INTO `proveedor`(`nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov`, `fecha_insert`, `user_insert`, `fecha_update`, `user_update`) VALUES (@nit, @nombre, @mail, @phone, @func, @fecha, @user, @fecha, @user)";
+                        MySqlCommand comando = new MySqlCommand(insert, conexion);
                         comando.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text.Trim();
                         comando.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = txt_NombreProv.Text.Trim();
                         comando.Parameters.Add("@mail", MySqlDbType.VarChar).Value = txt_EmailProv.Text.Trim();
@@ -416,6 +405,7 @@ namespace Proyecto_PV.Formularios
         {
             if (conexion.State == ConnectionState.Closed)
             {
+                conexion.ConnectionString = conexionSQL.Conectar();
                 conexion.Open();
             }
 
@@ -430,7 +420,8 @@ namespace Proyecto_PV.Formularios
             }
             else
             {
-                MySqlCommand command = new MySqlCommand("UPDATE `proveedor` SET `nit_prov`= @nit,`nom_provee`= @nombre,`mail_prov`= @mail,`tel_prov`= @phone,`func_prov`= @func,`fecha_update`= @fecha,`user_update`= @user WHERE `id` = @id", conexion);
+                string update = "UPDATE `proveedor` SET `nit_prov`= @nit,`nom_provee`= @nombre,`mail_prov`= @mail,`tel_prov`= @phone,`func_prov`= @func,`fecha_update`= @fecha,`user_update`= @user WHERE `id` = @id";
+                MySqlCommand command = new MySqlCommand(update, conexion);
                 command.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text.Trim();
                 command.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = txt_NombreProv.Text.Trim();
                 command.Parameters.Add("@mail", MySqlDbType.VarChar).Value = txt_EmailProv.Text.Trim();
@@ -467,6 +458,7 @@ namespace Proyecto_PV.Formularios
         {
             if (conexion.State == ConnectionState.Closed)
             {
+                conexion.ConnectionString = conexionSQL.Conectar();
                 conexion.Open();
             }
 
@@ -481,7 +473,8 @@ namespace Proyecto_PV.Formularios
             }
             else
             {
-                MySqlCommand command = new MySqlCommand("DELETE FROM `proveedor` WHERE `id` = @id", conexion);
+                string delete = "DELETE FROM `proveedor` WHERE `id` = @id";
+                MySqlCommand command = new MySqlCommand(delete, conexion);
                 command.Parameters.Add("@id", MySqlDbType.VarChar).Value = Global.id_proveedor;
                 command.ExecuteNonQuery();
 
