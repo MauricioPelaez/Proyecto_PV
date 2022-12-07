@@ -137,44 +137,6 @@ namespace Proyecto_PV.Formularios
         }
         #endregion
 
-        #region Selecionar registro (Tabla)
-        private void DGV_Proveedores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                txt_Nit.Text = DGV_Proveedores.CurrentRow.Cells[0].Value.ToString();
-                txt_NombreProv.Text = DGV_Proveedores.CurrentRow.Cells[1].Value.ToString();
-                txt_EmailProv.Text = DGV_Proveedores.CurrentRow.Cells[2].Value.ToString();
-                txt_TelefonoProv.Text = DGV_Proveedores.CurrentRow.Cells[3].Value.ToString();
-                combo_FuncionProv.SelectedItem = DGV_Proveedores.CurrentRow.Cells[4].Value.ToString();
-                Habilitar();
-                txt_Nit.Focus();
-                txt_Buscar.Text = "";
-                btn_Guardar.Enabled = false;
-                btn_Actualiazar.Enabled = true;
-                btn_Eliminar.Enabled = true;
-                btn_Nuevo.Enabled = true;
-
-
-                if (conexion.State == ConnectionState.Closed)
-                {
-                    conexion.ConnectionString = conexionSQL.Conectar();
-                    conexion.Open();
-                }
-
-                string query = "SELECT `id` FROM `proveedor` WHERE `nit_prov` = @nit";
-                MySqlCommand command = new MySqlCommand(query, conexion);
-                command.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text;
-                Global.id_proveedor = Convert.ToString(command.ExecuteScalar());
-
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
-        }
-        #endregion
-
         #region Saltos de linea
         private void txt_Nit_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -253,6 +215,45 @@ namespace Proyecto_PV.Formularios
         }
         #endregion
 
+        #region Selecionar registro (Tabla)
+        private void DGV_Proveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txt_Nit.Text = DGV_Proveedores.CurrentRow.Cells[0].Value.ToString();
+                txt_NombreProv.Text = DGV_Proveedores.CurrentRow.Cells[1].Value.ToString();
+                txt_EmailProv.Text = DGV_Proveedores.CurrentRow.Cells[2].Value.ToString();
+                txt_TelefonoProv.Text = DGV_Proveedores.CurrentRow.Cells[3].Value.ToString();
+                combo_FuncionProv.SelectedItem = DGV_Proveedores.CurrentRow.Cells[4].Value.ToString();
+                Habilitar();
+                txt_Nit.Focus();
+                txt_Buscar.Text = "";
+                btn_Guardar.Enabled = false;
+                btn_Actualiazar.Enabled = true;
+                btn_Eliminar.Enabled = true;
+                btn_Nuevo.Enabled = true;
+
+
+                if (conexion.State == ConnectionState.Closed)
+                {
+                    conexion.ConnectionString = conexionSQL.Conectar();
+                    conexion.Open();
+                }
+
+                string query = "SELECT `id` FROM `proveedor` WHERE `nit_prov` = @nit";
+                MySqlCommand command = new MySqlCommand(query, conexion);
+                command.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text;
+                command.CommandTimeout = 60;
+                Global.id_proveedor = Convert.ToString(command.ExecuteScalar());
+
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+        }
+        #endregion
+
         #region Busqueda dinamica
         private void txt_Buscar_TextChanged_1(object sender, EventArgs e)
         {
@@ -264,6 +265,7 @@ namespace Proyecto_PV.Formularios
 
             string query = "SELECT `nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov` FROM `proveedor` WHERE `nit_prov` LIKE '%" + txt_Buscar.Text + "%' Or `nom_provee` LIKE '%" + txt_Buscar.Text + "%' Or `mail_prov` LIKE '%" + txt_Buscar.Text + "%' Or `tel_prov` LIKE '%" + txt_Buscar.Text + "%' Or `func_prov` LIKE '%" + txt_Buscar.Text + "%'";
             MySqlCommand comando = new MySqlCommand(query, conexion);
+            comando.CommandTimeout = 60;
             MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
 
             DataSet datos = new DataSet();
@@ -328,6 +330,7 @@ namespace Proyecto_PV.Formularios
                 string query = "SELECT * FROM `proveedor` WHERE `nit_prov` = @nit";
                 MySqlCommand command = new MySqlCommand(query, conexion);
                 command.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text;
+                command.CommandTimeout = 60;
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 DataSet datos = new DataSet();

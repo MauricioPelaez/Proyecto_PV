@@ -120,43 +120,6 @@ namespace Proyecto_PV.Formularios
         }
         #endregion
 
-        #region Selecionar registro (Tabla)
-        private void DGV_Bodegas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                txt_CodigoBod.Text = DGV_Bodegas.CurrentRow.Cells[0].Value.ToString();
-                txt_DescripcioBod.Text = DGV_Bodegas.CurrentRow.Cells[1].Value.ToString();
-                Habilitar();
-                txt_CodigoBod.Focus();
-                txt_Buscar.Text = "";
-                btn_Guardar.Enabled = false;
-                btn_Actualiazar.Enabled = true;
-                btn_Eliminar.Enabled = true;
-                btn_Nuevo.Enabled = true;
-
-
-                if (conexion.State == ConnectionState.Closed)
-                {
-                    conexion.ConnectionString = conexionSQL.Conectar();
-                    conexion.Open();
-                }
-
-                string query = "SELECT `id` FROM `bodega` WHERE `cod_bod` = @code Or `desc_bod` = @desc";
-                MySqlCommand command = new MySqlCommand(query, conexion);
-                command.Parameters.Add("@code", MySqlDbType.VarChar).Value = txt_CodigoBod.Text;
-                command.Parameters.Add("@desc", MySqlDbType.VarChar).Value = txt_DescripcioBod.Text;
-                Global.id_bodega = Convert.ToString(command.ExecuteScalar());
-
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
-            
-        }
-        #endregion
-
         #region Salto de linea
         private void txt_CodigoBod_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -207,6 +170,44 @@ namespace Proyecto_PV.Formularios
         }
         #endregion
 
+        #region Selecionar registro (Tabla)
+        private void DGV_Bodegas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txt_CodigoBod.Text = DGV_Bodegas.CurrentRow.Cells[0].Value.ToString();
+                txt_DescripcioBod.Text = DGV_Bodegas.CurrentRow.Cells[1].Value.ToString();
+                Habilitar();
+                txt_CodigoBod.Focus();
+                txt_Buscar.Text = "";
+                btn_Guardar.Enabled = false;
+                btn_Actualiazar.Enabled = true;
+                btn_Eliminar.Enabled = true;
+                btn_Nuevo.Enabled = true;
+
+
+                if (conexion.State == ConnectionState.Closed)
+                {
+                    conexion.ConnectionString = conexionSQL.Conectar();
+                    conexion.Open();
+                }
+
+                string query = "SELECT `id` FROM `bodega` WHERE `cod_bod` = @code Or `desc_bod` = @desc";
+                MySqlCommand command = new MySqlCommand(query, conexion);
+                command.Parameters.Add("@code", MySqlDbType.VarChar).Value = txt_CodigoBod.Text;
+                command.Parameters.Add("@desc", MySqlDbType.VarChar).Value = txt_DescripcioBod.Text;
+                command.CommandTimeout = 60;
+                Global.id_bodega = Convert.ToString(command.ExecuteScalar());
+
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+
+        }
+        #endregion
+
         #region Busqueda dinamica
         private void txt_Buscar_TextChanged(object sender, EventArgs e)
         {
@@ -218,6 +219,7 @@ namespace Proyecto_PV.Formularios
 
             string cadena = "SELECT `cod_bod`, `desc_bod` FROM `bodega` WHERE `cod_bod` LIKE '%" + txt_Buscar.Text + "%' Or `desc_bod` LIKE '%" + txt_Buscar.Text + "%'";
             MySqlCommand comando = new MySqlCommand(cadena, conexion);
+            comando.CommandTimeout = 60;
             MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
 
             DataSet datos = new DataSet();
@@ -283,6 +285,7 @@ namespace Proyecto_PV.Formularios
                 string cadena = "SELECT * FROM `bodega` WHERE `cod_bod` = @code";
                 MySqlCommand command = new MySqlCommand(cadena, conexion);
                 command.Parameters.Add("@code", MySqlDbType.VarChar).Value = txt_CodigoBod.Text;
+                command.CommandTimeout = 60;
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 DataSet datos = new DataSet();

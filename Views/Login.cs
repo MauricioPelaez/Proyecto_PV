@@ -221,6 +221,7 @@ namespace Proyecto_PV.Views
             //Mostrar el tipo de usuario ingresado
             MySqlCommand cmd = new MySqlCommand("SELECT `Tipo` FROM `login` WHERE `Usuario` = @user", conexion);
             cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = txtUser.Text;
+            cmd.CommandTimeout = 60;
             lbl_TipoUserIng.Text = Convert.ToString(cmd.ExecuteScalar());
             lbl_TipoUserIng.Visible = true;
 
@@ -237,10 +238,11 @@ namespace Proyecto_PV.Views
 
         #endregion
 
+        #region Cerrar Aplicacion
         private void btn_Salir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        #endregion
     }
 }
