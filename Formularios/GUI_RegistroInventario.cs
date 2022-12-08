@@ -239,7 +239,7 @@ namespace Proyecto_PV.Formularios
             double sumatoria_Compra = 0;
             foreach (DataGridViewRow row in DGV_Productos.Rows)
             {
-                sumatoria_Compra += Convert.ToDouble(row.Cells[5].Value);
+                sumatoria_Compra += Convert.ToDouble(row.Cells[5].Value) * Convert.ToDouble(row.Cells[4].Value);
             }
             string compra = sumatoria_Compra.ToString("#,#");
             txt_Total_Valor_Compra.Text = $"$ {compra}";
@@ -250,7 +250,7 @@ namespace Proyecto_PV.Formularios
             double sumatoria_Venta = 0;
             foreach (DataGridViewRow row in DGV_Productos.Rows)
             {
-                sumatoria_Venta += Convert.ToDouble(row.Cells[6].Value);
+                sumatoria_Venta += Convert.ToDouble(row.Cells[6].Value) * Convert.ToDouble(row.Cells[4].Value);
             }
             string venta = sumatoria_Venta.ToString("#,#");
             txt_Total_Valor_Venta.Text = $"$ {venta}";
@@ -529,7 +529,7 @@ namespace Proyecto_PV.Formularios
             }
             else
             {
-                string cadena = "SELECT * FROM `inventario` WHERE `cod_prod` = @code";
+                string cadena = "SELECT `cod_prod`, `desc_prod`, `nom_provee`, `bodega`, `stck_prod`, `val_compra`, `val_venta`, `gan_unidad`, `dto_prod`, `gana_prod` FROM `inventario` WHERE `cod_prod` = @code";
                 MySqlCommand command = new MySqlCommand(cadena, conexion);
                 command.Parameters.Add("@code", MySqlDbType.VarChar).Value = txt_Codigo.Text;
                 command.CommandTimeout = 60;
@@ -619,7 +619,7 @@ namespace Proyecto_PV.Formularios
                         MessageBoxResult resultado;
                         resultado = System.Windows.MessageBox.Show(mensaje, titulo, boton, icon);
 
-                        Console.WriteLine(ex.Message);
+                        System.Diagnostics.Debug.WriteLine(ex.Message);
                         conexion.Dispose();
                     }
                 }
@@ -703,6 +703,9 @@ namespace Proyecto_PV.Formularios
                 Tabla();
                 Deshabilitar();
                 Reestablecer();
+                TotalCompra();
+                TotalVenta();
+                TotalGanancias();
 
                 if (conexion.State == ConnectionState.Open)
                 {
@@ -771,17 +774,6 @@ namespace Proyecto_PV.Formularios
             Global.pestaña = false;
             this.Close();
         }
-
-
-
-
-
-
-
-
-
-
-
         #endregion
 
         #region Botón Cancelar

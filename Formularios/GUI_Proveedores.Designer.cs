@@ -30,8 +30,14 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Proveedores));
             this.pnl_Principal = new System.Windows.Forms.Panel();
             this.pnl_Datos = new System.Windows.Forms.Panel();
+            this.btn_Cancelar = new Proyecto_PV.Resources.Botones();
+            this.btn_Eliminar = new Proyecto_PV.Resources.Botones();
+            this.btn_Actualiazar = new Proyecto_PV.Resources.Botones();
+            this.btn_Guardar = new Proyecto_PV.Resources.Botones();
+            this.btn_Nuevo = new Proyecto_PV.Resources.Botones();
             this.gb_DatosProv = new System.Windows.Forms.GroupBox();
             this.lbl_funcion = new System.Windows.Forms.Label();
             this.lbl_telefono = new System.Windows.Forms.Label();
@@ -45,19 +51,14 @@
             this.lbl_nit = new System.Windows.Forms.Label();
             this.txt_Nit = new System.Windows.Forms.TextBox();
             this.pnl_Inferior = new System.Windows.Forms.Panel();
+            this.lbl_NRegistros = new System.Windows.Forms.Label();
             this.DGV_Proveedores = new System.Windows.Forms.DataGridView();
             this.lbl_Buscar = new System.Windows.Forms.Label();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.pnl_Cabecera = new System.Windows.Forms.Panel();
             this.img_Logo = new System.Windows.Forms.PictureBox();
-            this.lbl_Titulo = new System.Windows.Forms.Label();
-            this.lbl_NRegistros = new System.Windows.Forms.Label();
-            this.btn_Cancelar = new Proyecto_PV.Resources.Botones();
-            this.btn_Eliminar = new Proyecto_PV.Resources.Botones();
-            this.btn_Actualiazar = new Proyecto_PV.Resources.Botones();
-            this.btn_Guardar = new Proyecto_PV.Resources.Botones();
-            this.btn_Nuevo = new Proyecto_PV.Resources.Botones();
             this.btn_Volver = new Proyecto_PV.Resources.Botones();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.pnl_Principal.SuspendLayout();
             this.pnl_Datos.SuspendLayout();
             this.gb_DatosProv.SuspendLayout();
@@ -76,7 +77,7 @@
             this.pnl_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Principal.Location = new System.Drawing.Point(0, 0);
             this.pnl_Principal.Name = "pnl_Principal";
-            this.pnl_Principal.Size = new System.Drawing.Size(884, 600);
+            this.pnl_Principal.Size = new System.Drawing.Size(1000, 600);
             this.pnl_Principal.TabIndex = 1;
             // 
             // pnl_Datos
@@ -92,8 +93,116 @@
             this.pnl_Datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Datos.Location = new System.Drawing.Point(0, 65);
             this.pnl_Datos.Name = "pnl_Datos";
-            this.pnl_Datos.Size = new System.Drawing.Size(880, 271);
+            this.pnl_Datos.Size = new System.Drawing.Size(996, 271);
             this.pnl_Datos.TabIndex = 2;
+            // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
+            this.btn_Cancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
+            this.btn_Cancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Cancelar.BorderRadius = 20;
+            this.btn_Cancelar.BorderSize = 0;
+            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancelar.Location = new System.Drawing.Point(792, 213);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Cancelar.TabIndex = 81;
+            this.btn_Cancelar.Text = "CANCELAR";
+            this.btn_Cancelar.TextColor = System.Drawing.Color.White;
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btn_Eliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btn_Eliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Eliminar.BorderRadius = 20;
+            this.btn_Eliminar.BorderSize = 0;
+            this.btn_Eliminar.Enabled = false;
+            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
+            this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
+            this.btn_Eliminar.Location = new System.Drawing.Point(792, 166);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Eliminar.TabIndex = 80;
+            this.btn_Eliminar.Text = "ELIMINAR";
+            this.btn_Eliminar.TextColor = System.Drawing.Color.White;
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click_1);
+            // 
+            // btn_Actualiazar
+            // 
+            this.btn_Actualiazar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Actualiazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btn_Actualiazar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btn_Actualiazar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Actualiazar.BorderRadius = 20;
+            this.btn_Actualiazar.BorderSize = 0;
+            this.btn_Actualiazar.Enabled = false;
+            this.btn_Actualiazar.FlatAppearance.BorderSize = 0;
+            this.btn_Actualiazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Actualiazar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Actualiazar.ForeColor = System.Drawing.Color.White;
+            this.btn_Actualiazar.Location = new System.Drawing.Point(792, 119);
+            this.btn_Actualiazar.Name = "btn_Actualiazar";
+            this.btn_Actualiazar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Actualiazar.TabIndex = 79;
+            this.btn_Actualiazar.Text = "ACTUALIZAR";
+            this.btn_Actualiazar.TextColor = System.Drawing.Color.White;
+            this.btn_Actualiazar.UseVisualStyleBackColor = false;
+            this.btn_Actualiazar.Click += new System.EventHandler(this.btn_Actualiazar_Click_1);
+            // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Guardar.BackColor = System.Drawing.Color.Teal;
+            this.btn_Guardar.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_Guardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Guardar.BorderRadius = 20;
+            this.btn_Guardar.BorderSize = 0;
+            this.btn_Guardar.Enabled = false;
+            this.btn_Guardar.FlatAppearance.BorderSize = 0;
+            this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Guardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.Location = new System.Drawing.Point(792, 72);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Guardar.TabIndex = 78;
+            this.btn_Guardar.Text = "GUARDAR";
+            this.btn_Guardar.TextColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.UseVisualStyleBackColor = false;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click_1);
+            // 
+            // btn_Nuevo
+            // 
+            this.btn_Nuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
+            this.btn_Nuevo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
+            this.btn_Nuevo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Nuevo.BorderRadius = 20;
+            this.btn_Nuevo.BorderSize = 0;
+            this.btn_Nuevo.FlatAppearance.BorderSize = 0;
+            this.btn_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Nuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Nuevo.ForeColor = System.Drawing.Color.White;
+            this.btn_Nuevo.Location = new System.Drawing.Point(792, 25);
+            this.btn_Nuevo.Name = "btn_Nuevo";
+            this.btn_Nuevo.Size = new System.Drawing.Size(105, 40);
+            this.btn_Nuevo.TabIndex = 77;
+            this.btn_Nuevo.Text = "NUEVO";
+            this.btn_Nuevo.TextColor = System.Drawing.Color.White;
+            this.btn_Nuevo.UseVisualStyleBackColor = false;
+            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click_1);
             // 
             // gb_DatosProv
             // 
@@ -113,7 +222,7 @@
             this.gb_DatosProv.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gb_DatosProv.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_DatosProv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.gb_DatosProv.Location = new System.Drawing.Point(35, 23);
+            this.gb_DatosProv.Location = new System.Drawing.Point(95, 23);
             this.gb_DatosProv.Name = "gb_DatosProv";
             this.gb_DatosProv.Size = new System.Drawing.Size(665, 223);
             this.gb_DatosProv.TabIndex = 72;
@@ -267,8 +376,20 @@
             this.pnl_Inferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Inferior.Location = new System.Drawing.Point(0, 336);
             this.pnl_Inferior.Name = "pnl_Inferior";
-            this.pnl_Inferior.Size = new System.Drawing.Size(880, 260);
+            this.pnl_Inferior.Size = new System.Drawing.Size(996, 260);
             this.pnl_Inferior.TabIndex = 1;
+            // 
+            // lbl_NRegistros
+            // 
+            this.lbl_NRegistros.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_NRegistros.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NRegistros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.lbl_NRegistros.Location = new System.Drawing.Point(810, 20);
+            this.lbl_NRegistros.Name = "lbl_NRegistros";
+            this.lbl_NRegistros.Size = new System.Drawing.Size(150, 23);
+            this.lbl_NRegistros.TabIndex = 65;
+            this.lbl_NRegistros.Text = "N° registros";
+            this.lbl_NRegistros.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // DGV_Proveedores
             // 
@@ -306,7 +427,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_Proveedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_Proveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Proveedores.Size = new System.Drawing.Size(809, 178);
+            this.DGV_Proveedores.Size = new System.Drawing.Size(925, 178);
             this.DGV_Proveedores.TabIndex = 60;
             this.DGV_Proveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Proveedores_CellClick);
             // 
@@ -341,150 +462,18 @@
             this.pnl_Cabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Cabecera.Location = new System.Drawing.Point(0, 0);
             this.pnl_Cabecera.Name = "pnl_Cabecera";
-            this.pnl_Cabecera.Size = new System.Drawing.Size(880, 65);
+            this.pnl_Cabecera.Size = new System.Drawing.Size(996, 65);
             this.pnl_Cabecera.TabIndex = 0;
             // 
             // img_Logo
             // 
-            this.img_Logo.Image = global::Proyecto_PV.Properties.Resources.Proveedores;
-            this.img_Logo.Location = new System.Drawing.Point(28, 6);
+            this.img_Logo.Image = ((System.Drawing.Image)(resources.GetObject("img_Logo.Image")));
+            this.img_Logo.Location = new System.Drawing.Point(32, 7);
             this.img_Logo.Name = "img_Logo";
             this.img_Logo.Size = new System.Drawing.Size(57, 50);
             this.img_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Logo.TabIndex = 34;
             this.img_Logo.TabStop = false;
-            // 
-            // lbl_Titulo
-            // 
-            this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_Titulo.Location = new System.Drawing.Point(1, 16);
-            this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(879, 34);
-            this.lbl_Titulo.TabIndex = 33;
-            this.lbl_Titulo.Text = "PROVEEDORES";
-            this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_NRegistros
-            // 
-            this.lbl_NRegistros.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbl_NRegistros.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NRegistros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_NRegistros.Location = new System.Drawing.Point(694, 20);
-            this.lbl_NRegistros.Name = "lbl_NRegistros";
-            this.lbl_NRegistros.Size = new System.Drawing.Size(150, 23);
-            this.lbl_NRegistros.TabIndex = 65;
-            this.lbl_NRegistros.Text = "N° registros";
-            this.lbl_NRegistros.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // btn_Cancelar
-            // 
-            this.btn_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
-            this.btn_Cancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
-            this.btn_Cancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Cancelar.BorderRadius = 20;
-            this.btn_Cancelar.BorderSize = 0;
-            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
-            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancelar.Location = new System.Drawing.Point(732, 213);
-            this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Cancelar.TabIndex = 81;
-            this.btn_Cancelar.Text = "CANCELAR";
-            this.btn_Cancelar.TextColor = System.Drawing.Color.White;
-            this.btn_Cancelar.UseVisualStyleBackColor = false;
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
-            // 
-            // btn_Eliminar
-            // 
-            this.btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btn_Eliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btn_Eliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Eliminar.BorderRadius = 20;
-            this.btn_Eliminar.BorderSize = 0;
-            this.btn_Eliminar.Enabled = false;
-            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
-            this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.btn_Eliminar.Location = new System.Drawing.Point(732, 166);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Eliminar.TabIndex = 80;
-            this.btn_Eliminar.Text = "ELIMINAR";
-            this.btn_Eliminar.TextColor = System.Drawing.Color.White;
-            this.btn_Eliminar.UseVisualStyleBackColor = false;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click_1);
-            // 
-            // btn_Actualiazar
-            // 
-            this.btn_Actualiazar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Actualiazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btn_Actualiazar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btn_Actualiazar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Actualiazar.BorderRadius = 20;
-            this.btn_Actualiazar.BorderSize = 0;
-            this.btn_Actualiazar.Enabled = false;
-            this.btn_Actualiazar.FlatAppearance.BorderSize = 0;
-            this.btn_Actualiazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Actualiazar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Actualiazar.ForeColor = System.Drawing.Color.White;
-            this.btn_Actualiazar.Location = new System.Drawing.Point(732, 119);
-            this.btn_Actualiazar.Name = "btn_Actualiazar";
-            this.btn_Actualiazar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Actualiazar.TabIndex = 79;
-            this.btn_Actualiazar.Text = "ACTUALIZAR";
-            this.btn_Actualiazar.TextColor = System.Drawing.Color.White;
-            this.btn_Actualiazar.UseVisualStyleBackColor = false;
-            this.btn_Actualiazar.Click += new System.EventHandler(this.btn_Actualiazar_Click_1);
-            // 
-            // btn_Guardar
-            // 
-            this.btn_Guardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Guardar.BackColor = System.Drawing.Color.Teal;
-            this.btn_Guardar.BackgroundColor = System.Drawing.Color.Teal;
-            this.btn_Guardar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Guardar.BorderRadius = 20;
-            this.btn_Guardar.BorderSize = 0;
-            this.btn_Guardar.Enabled = false;
-            this.btn_Guardar.FlatAppearance.BorderSize = 0;
-            this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Guardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar.Location = new System.Drawing.Point(732, 72);
-            this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Guardar.TabIndex = 78;
-            this.btn_Guardar.Text = "GUARDAR";
-            this.btn_Guardar.TextColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar.UseVisualStyleBackColor = false;
-            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click_1);
-            // 
-            // btn_Nuevo
-            // 
-            this.btn_Nuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
-            this.btn_Nuevo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
-            this.btn_Nuevo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Nuevo.BorderRadius = 20;
-            this.btn_Nuevo.BorderSize = 0;
-            this.btn_Nuevo.FlatAppearance.BorderSize = 0;
-            this.btn_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Nuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo.ForeColor = System.Drawing.Color.White;
-            this.btn_Nuevo.Location = new System.Drawing.Point(732, 25);
-            this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.Size = new System.Drawing.Size(105, 40);
-            this.btn_Nuevo.TabIndex = 77;
-            this.btn_Nuevo.Text = "NUEVO";
-            this.btn_Nuevo.TextColor = System.Drawing.Color.White;
-            this.btn_Nuevo.UseVisualStyleBackColor = false;
-            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click_1);
             // 
             // btn_Volver
             // 
@@ -500,7 +489,7 @@
             this.btn_Volver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Volver.ForeColor = System.Drawing.Color.White;
             this.btn_Volver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Volver.Location = new System.Drawing.Point(738, 13);
+            this.btn_Volver.Location = new System.Drawing.Point(854, 13);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(99, 39);
             this.btn_Volver.TabIndex = 0;
@@ -509,12 +498,24 @@
             this.btn_Volver.UseVisualStyleBackColor = false;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.lbl_Titulo.Location = new System.Drawing.Point(59, 16);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(879, 34);
+            this.lbl_Titulo.TabIndex = 33;
+            this.lbl_Titulo.Text = "PROVEEDORES";
+            this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GUI_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(884, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.pnl_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_Proveedores";

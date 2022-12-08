@@ -68,7 +68,7 @@
             // 
             // img_Splash
             // 
-            this.img_Splash.Image = global::Proyecto_PV.Properties.Resources.LOGO_PV_Black_1;
+            this.img_Splash.Image = ((System.Drawing.Image)(resources.GetObject("img_Splash.Image")));
             this.img_Splash.Location = new System.Drawing.Point(0, 0);
             this.img_Splash.Name = "img_Splash";
             this.img_Splash.Size = new System.Drawing.Size(560, 224);

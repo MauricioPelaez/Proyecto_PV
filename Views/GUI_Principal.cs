@@ -390,7 +390,8 @@ namespace Proyecto_PV.Views
 
         private void btn_ConsultaInv_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario(new GUI_Inventario());
+            RetraerTodo();
         }
 
         private void bnt_BodegaInv_Click(object sender, EventArgs e)
@@ -403,8 +404,12 @@ namespace Proyecto_PV.Views
         {
 
         }
+
         #endregion
 
-
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
+        }
     }
 }

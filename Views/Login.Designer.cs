@@ -73,7 +73,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Proyecto_PV.Properties.Resources.PV_M;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 32);
@@ -95,7 +95,7 @@
             this.btn_Minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
             this.btn_Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Minimizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Minimizar.Image = global::Proyecto_PV.Properties.Resources.Minimizar;
+            this.btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minimizar.Image")));
             this.btn_Minimizar.Location = new System.Drawing.Point(205, 12);
             this.btn_Minimizar.Name = "btn_Minimizar";
             this.btn_Minimizar.Size = new System.Drawing.Size(35, 28);
@@ -141,7 +141,7 @@
             this.btn_Maximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
             this.btn_Maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Maximizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Maximizar.Image = global::Proyecto_PV.Properties.Resources.Maximizar;
+            this.btn_Maximizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maximizar.Image")));
             this.btn_Maximizar.Location = new System.Drawing.Point(246, 12);
             this.btn_Maximizar.Name = "btn_Maximizar";
             this.btn_Maximizar.Size = new System.Drawing.Size(35, 28);
@@ -164,7 +164,7 @@
             this.btn_Restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
             this.btn_Restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Restaurar.ForeColor = System.Drawing.Color.White;
-            this.btn_Restaurar.Image = global::Proyecto_PV.Properties.Resources.Restaurar;
+            this.btn_Restaurar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Restaurar.Image")));
             this.btn_Restaurar.Location = new System.Drawing.Point(246, 12);
             this.btn_Restaurar.Name = "btn_Restaurar";
             this.btn_Restaurar.Size = new System.Drawing.Size(35, 28);
@@ -256,7 +256,7 @@
             // img_Logo
             // 
             this.img_Logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.img_Logo.Image = global::Proyecto_PV.Properties.Resources.Gato_negro;
+            this.img_Logo.Image = ((System.Drawing.Image)(resources.GetObject("img_Logo.Image")));
             this.img_Logo.Location = new System.Drawing.Point(115, 61);
             this.img_Logo.Name = "img_Logo";
             this.img_Logo.Size = new System.Drawing.Size(110, 110);

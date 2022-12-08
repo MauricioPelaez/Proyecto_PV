@@ -28,16 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_RegistroInventario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_Cabecera = new System.Windows.Forms.Panel();
             this.img_Logo = new System.Windows.Forms.PictureBox();
+            this.btn_Volver = new Proyecto_PV.Resources.Botones();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.pnl_Principal = new System.Windows.Forms.Panel();
             this.pnl_Datos = new System.Windows.Forms.Panel();
+            this.btn_Cancelar = new Proyecto_PV.Resources.Botones();
+            this.btn_Eliminar = new Proyecto_PV.Resources.Botones();
+            this.btn_Actualizar = new Proyecto_PV.Resources.Botones();
+            this.btn_Guardar = new Proyecto_PV.Resources.Botones();
+            this.btn_Nuevo = new Proyecto_PV.Resources.Botones();
             this.gb_DetallesProd = new System.Windows.Forms.GroupBox();
+            this.txt_Stock = new System.Windows.Forms.Label();
+            this.txt_Ganancia = new System.Windows.Forms.Label();
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.combo_Descuento = new System.Windows.Forms.ComboBox();
             this.lbl_Descuento = new System.Windows.Forms.Label();
@@ -58,24 +67,16 @@
             this.combo_Bodega = new System.Windows.Forms.ComboBox();
             this.txt_Cantidad = new System.Windows.Forms.TextBox();
             this.pnl_Inferior = new System.Windows.Forms.Panel();
-            this.lbl_Buscar = new System.Windows.Forms.Label();
-            this.txt_Buscar = new System.Windows.Forms.TextBox();
-            this.DGV_Productos = new System.Windows.Forms.DataGridView();
-            this.lbl_NRegistros = new System.Windows.Forms.Label();
-            this.txt_Ganancia = new System.Windows.Forms.Label();
-            this.txt_Stock = new System.Windows.Forms.Label();
-            this.txt_Total_Valor_Compra = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_Total_Valor_Venta = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txt_Total_Ganancias = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_Cancelar = new Proyecto_PV.Resources.Botones();
-            this.btn_Eliminar = new Proyecto_PV.Resources.Botones();
-            this.btn_Actualizar = new Proyecto_PV.Resources.Botones();
-            this.btn_Guardar = new Proyecto_PV.Resources.Botones();
-            this.btn_Nuevo = new Proyecto_PV.Resources.Botones();
-            this.btn_Volver = new Proyecto_PV.Resources.Botones();
+            this.txt_Total_Valor_Venta = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_Total_Valor_Compra = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_NRegistros = new System.Windows.Forms.Label();
+            this.DGV_Productos = new System.Windows.Forms.DataGridView();
+            this.lbl_Buscar = new System.Windows.Forms.Label();
+            this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.pnl_Cabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).BeginInit();
             this.pnl_Principal.SuspendLayout();
@@ -95,25 +96,48 @@
             this.pnl_Cabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Cabecera.Location = new System.Drawing.Point(0, 0);
             this.pnl_Cabecera.Name = "pnl_Cabecera";
-            this.pnl_Cabecera.Size = new System.Drawing.Size(880, 65);
+            this.pnl_Cabecera.Size = new System.Drawing.Size(996, 65);
             this.pnl_Cabecera.TabIndex = 26;
             // 
             // img_Logo
             // 
-            this.img_Logo.Image = global::Proyecto_PV.Properties.Resources.IconInventario;
-            this.img_Logo.Location = new System.Drawing.Point(28, 6);
+            this.img_Logo.Image = ((System.Drawing.Image)(resources.GetObject("img_Logo.Image")));
+            this.img_Logo.Location = new System.Drawing.Point(28, 7);
             this.img_Logo.Name = "img_Logo";
             this.img_Logo.Size = new System.Drawing.Size(57, 50);
             this.img_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Logo.TabIndex = 33;
             this.img_Logo.TabStop = false;
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
+            this.btn_Volver.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
+            this.btn_Volver.BorderColor = System.Drawing.Color.Empty;
+            this.btn_Volver.BorderRadius = 20;
+            this.btn_Volver.BorderSize = 0;
+            this.btn_Volver.FlatAppearance.BorderSize = 0;
+            this.btn_Volver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
+            this.btn_Volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Volver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Volver.ForeColor = System.Drawing.Color.White;
+            this.btn_Volver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Volver.Location = new System.Drawing.Point(857, 13);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(99, 39);
+            this.btn_Volver.TabIndex = 31;
+            this.btn_Volver.Text = "VOLVER";
+            this.btn_Volver.TextColor = System.Drawing.Color.White;
+            this.btn_Volver.UseVisualStyleBackColor = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
             // lbl_Titulo
             // 
             this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_Titulo.Location = new System.Drawing.Point(0, 13);
+            this.lbl_Titulo.Location = new System.Drawing.Point(58, 13);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(880, 39);
             this.lbl_Titulo.TabIndex = 32;
@@ -130,7 +154,7 @@
             this.pnl_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Principal.Location = new System.Drawing.Point(0, 0);
             this.pnl_Principal.Name = "pnl_Principal";
-            this.pnl_Principal.Size = new System.Drawing.Size(884, 600);
+            this.pnl_Principal.Size = new System.Drawing.Size(1000, 600);
             this.pnl_Principal.TabIndex = 28;
             // 
             // pnl_Datos
@@ -145,8 +169,116 @@
             this.pnl_Datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Datos.Location = new System.Drawing.Point(0, 65);
             this.pnl_Datos.Name = "pnl_Datos";
-            this.pnl_Datos.Size = new System.Drawing.Size(880, 271);
+            this.pnl_Datos.Size = new System.Drawing.Size(996, 271);
             this.pnl_Datos.TabIndex = 28;
+            // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
+            this.btn_Cancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
+            this.btn_Cancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Cancelar.BorderRadius = 20;
+            this.btn_Cancelar.BorderSize = 0;
+            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancelar.Location = new System.Drawing.Point(798, 212);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Cancelar.TabIndex = 76;
+            this.btn_Cancelar.Text = "CANCELAR";
+            this.btn_Cancelar.TextColor = System.Drawing.Color.White;
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btn_Eliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btn_Eliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Eliminar.BorderRadius = 20;
+            this.btn_Eliminar.BorderSize = 0;
+            this.btn_Eliminar.Enabled = false;
+            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
+            this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
+            this.btn_Eliminar.Location = new System.Drawing.Point(798, 165);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Eliminar.TabIndex = 75;
+            this.btn_Eliminar.Text = "ELIMINAR";
+            this.btn_Eliminar.TextColor = System.Drawing.Color.White;
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
+            // btn_Actualizar
+            // 
+            this.btn_Actualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btn_Actualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btn_Actualizar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Actualizar.BorderRadius = 20;
+            this.btn_Actualizar.BorderSize = 0;
+            this.btn_Actualizar.Enabled = false;
+            this.btn_Actualizar.FlatAppearance.BorderSize = 0;
+            this.btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Actualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Actualizar.ForeColor = System.Drawing.Color.White;
+            this.btn_Actualizar.Location = new System.Drawing.Point(798, 118);
+            this.btn_Actualizar.Name = "btn_Actualizar";
+            this.btn_Actualizar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Actualizar.TabIndex = 74;
+            this.btn_Actualizar.Text = "ACTUALIZAR";
+            this.btn_Actualizar.TextColor = System.Drawing.Color.White;
+            this.btn_Actualizar.UseVisualStyleBackColor = false;
+            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
+            // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Guardar.BackColor = System.Drawing.Color.Teal;
+            this.btn_Guardar.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_Guardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Guardar.BorderRadius = 20;
+            this.btn_Guardar.BorderSize = 0;
+            this.btn_Guardar.Enabled = false;
+            this.btn_Guardar.FlatAppearance.BorderSize = 0;
+            this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Guardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.Location = new System.Drawing.Point(798, 71);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(105, 40);
+            this.btn_Guardar.TabIndex = 73;
+            this.btn_Guardar.Text = "GUARDAR";
+            this.btn_Guardar.TextColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.UseVisualStyleBackColor = false;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
+            // 
+            // btn_Nuevo
+            // 
+            this.btn_Nuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
+            this.btn_Nuevo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
+            this.btn_Nuevo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Nuevo.BorderRadius = 20;
+            this.btn_Nuevo.BorderSize = 0;
+            this.btn_Nuevo.FlatAppearance.BorderSize = 0;
+            this.btn_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Nuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Nuevo.ForeColor = System.Drawing.Color.White;
+            this.btn_Nuevo.Location = new System.Drawing.Point(798, 24);
+            this.btn_Nuevo.Name = "btn_Nuevo";
+            this.btn_Nuevo.Size = new System.Drawing.Size(105, 40);
+            this.btn_Nuevo.TabIndex = 72;
+            this.btn_Nuevo.Text = "NUEVO";
+            this.btn_Nuevo.TextColor = System.Drawing.Color.White;
+            this.btn_Nuevo.UseVisualStyleBackColor = false;
+            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
             // 
             // gb_DetallesProd
             // 
@@ -176,13 +308,41 @@
             this.gb_DetallesProd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gb_DetallesProd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_DetallesProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.gb_DetallesProd.Location = new System.Drawing.Point(31, 13);
+            this.gb_DetallesProd.Location = new System.Drawing.Point(88, 18);
             this.gb_DetallesProd.Name = "gb_DetallesProd";
             this.gb_DetallesProd.Size = new System.Drawing.Size(674, 245);
             this.gb_DetallesProd.TabIndex = 71;
             this.gb_DetallesProd.TabStop = false;
             this.gb_DetallesProd.Text = "Detalles del producto";
             this.gb_DetallesProd.Paint += new System.Windows.Forms.PaintEventHandler(this.gb_DetallesProd_Paint);
+            // 
+            // txt_Stock
+            // 
+            this.txt_Stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
+            this.txt_Stock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txt_Stock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Stock.ForeColor = System.Drawing.Color.White;
+            this.txt_Stock.Location = new System.Drawing.Point(423, 140);
+            this.txt_Stock.Name = "txt_Stock";
+            this.txt_Stock.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.txt_Stock.Size = new System.Drawing.Size(220, 23);
+            this.txt_Stock.TabIndex = 78;
+            this.txt_Stock.Text = "0";
+            this.txt_Stock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Ganancia
+            // 
+            this.txt_Ganancia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
+            this.txt_Ganancia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txt_Ganancia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Ganancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
+            this.txt_Ganancia.Location = new System.Drawing.Point(423, 210);
+            this.txt_Ganancia.Name = "txt_Ganancia";
+            this.txt_Ganancia.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.txt_Ganancia.Size = new System.Drawing.Size(220, 23);
+            this.txt_Ganancia.TabIndex = 77;
+            this.txt_Ganancia.Text = "0";
+            this.txt_Ganancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Fecha
             // 
@@ -438,29 +598,98 @@
             this.pnl_Inferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Inferior.Location = new System.Drawing.Point(0, 336);
             this.pnl_Inferior.Name = "pnl_Inferior";
-            this.pnl_Inferior.Size = new System.Drawing.Size(880, 260);
+            this.pnl_Inferior.Size = new System.Drawing.Size(996, 260);
             this.pnl_Inferior.TabIndex = 27;
             // 
-            // lbl_Buscar
+            // txt_Total_Ganancias
             // 
-            this.lbl_Buscar.AutoSize = true;
-            this.lbl_Buscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.lbl_Buscar.Location = new System.Drawing.Point(28, 20);
-            this.lbl_Buscar.Name = "lbl_Buscar";
-            this.lbl_Buscar.Size = new System.Drawing.Size(57, 15);
-            this.lbl_Buscar.TabIndex = 56;
-            this.lbl_Buscar.Text = "BUSCAR:";
+            this.txt_Total_Ganancias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Total_Ganancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
+            this.txt_Total_Ganancias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txt_Total_Ganancias.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Total_Ganancias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
+            this.txt_Total_Ganancias.Location = new System.Drawing.Point(806, 228);
+            this.txt_Total_Ganancias.Name = "txt_Total_Ganancias";
+            this.txt_Total_Ganancias.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.txt_Total_Ganancias.Size = new System.Drawing.Size(150, 23);
+            this.txt_Total_Ganancias.TabIndex = 84;
+            this.txt_Total_Ganancias.Text = "$";
+            this.txt_Total_Ganancias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txt_Buscar
+            // label6
             // 
-            this.txt_Buscar.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_Buscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.Location = new System.Drawing.Point(91, 15);
-            this.txt_Buscar.Name = "txt_Buscar";
-            this.txt_Buscar.Size = new System.Drawing.Size(350, 23);
-            this.txt_Buscar.TabIndex = 54;
-            this.txt_Buscar.TextChanged += new System.EventHandler(this.txt_Buscar_TextChanged);
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(687, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 23);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "TOTAL GANANCIAS:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Total_Valor_Venta
+            // 
+            this.txt_Total_Valor_Venta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Total_Valor_Venta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
+            this.txt_Total_Valor_Venta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txt_Total_Valor_Venta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Total_Valor_Venta.ForeColor = System.Drawing.Color.White;
+            this.txt_Total_Valor_Venta.Location = new System.Drawing.Point(474, 228);
+            this.txt_Total_Valor_Venta.Name = "txt_Total_Valor_Venta";
+            this.txt_Total_Valor_Venta.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.txt_Total_Valor_Venta.Size = new System.Drawing.Size(150, 23);
+            this.txt_Total_Valor_Venta.TabIndex = 82;
+            this.txt_Total_Valor_Venta.Text = "$";
+            this.txt_Total_Valor_Venta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(374, 228);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 23);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "V. TOTAL VENTA:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Total_Valor_Compra
+            // 
+            this.txt_Total_Valor_Compra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Total_Valor_Compra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
+            this.txt_Total_Valor_Compra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txt_Total_Valor_Compra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Total_Valor_Compra.ForeColor = System.Drawing.Color.White;
+            this.txt_Total_Valor_Compra.Location = new System.Drawing.Point(146, 228);
+            this.txt_Total_Valor_Compra.Name = "txt_Total_Valor_Compra";
+            this.txt_Total_Valor_Compra.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.txt_Total_Valor_Compra.Size = new System.Drawing.Size(150, 23);
+            this.txt_Total_Valor_Compra.TabIndex = 80;
+            this.txt_Total_Valor_Compra.Text = "$";
+            this.txt_Total_Valor_Compra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 23);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "V. TOTAL  COMPRA:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_NRegistros
+            // 
+            this.lbl_NRegistros.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_NRegistros.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NRegistros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.lbl_NRegistros.Location = new System.Drawing.Point(806, 20);
+            this.lbl_NRegistros.Name = "lbl_NRegistros";
+            this.lbl_NRegistros.Size = new System.Drawing.Size(150, 23);
+            this.lbl_NRegistros.TabIndex = 65;
+            this.lbl_NRegistros.Text = "N° registros";
+            this.lbl_NRegistros.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // DGV_Productos
             // 
@@ -509,260 +738,39 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_Productos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Productos.Size = new System.Drawing.Size(809, 160);
+            this.DGV_Productos.Size = new System.Drawing.Size(925, 160);
             this.DGV_Productos.TabIndex = 62;
             this.DGV_Productos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Productos_CellClick);
             // 
-            // lbl_NRegistros
+            // lbl_Buscar
             // 
-            this.lbl_NRegistros.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbl_NRegistros.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NRegistros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_NRegistros.Location = new System.Drawing.Point(690, 20);
-            this.lbl_NRegistros.Name = "lbl_NRegistros";
-            this.lbl_NRegistros.Size = new System.Drawing.Size(150, 23);
-            this.lbl_NRegistros.TabIndex = 65;
-            this.lbl_NRegistros.Text = "N° registros";
-            this.lbl_NRegistros.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lbl_Buscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Buscar.AutoSize = true;
+            this.lbl_Buscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
+            this.lbl_Buscar.Location = new System.Drawing.Point(28, 20);
+            this.lbl_Buscar.Name = "lbl_Buscar";
+            this.lbl_Buscar.Size = new System.Drawing.Size(57, 15);
+            this.lbl_Buscar.TabIndex = 56;
+            this.lbl_Buscar.Text = "BUSCAR:";
             // 
-            // txt_Ganancia
+            // txt_Buscar
             // 
-            this.txt_Ganancia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.txt_Ganancia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txt_Ganancia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Ganancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
-            this.txt_Ganancia.Location = new System.Drawing.Point(423, 210);
-            this.txt_Ganancia.Name = "txt_Ganancia";
-            this.txt_Ganancia.Size = new System.Drawing.Size(220, 23);
-            this.txt_Ganancia.TabIndex = 77;
-            this.txt_Ganancia.Text = "0";
-            this.txt_Ganancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Stock
-            // 
-            this.txt_Stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.txt_Stock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txt_Stock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Stock.ForeColor = System.Drawing.Color.White;
-            this.txt_Stock.Location = new System.Drawing.Point(423, 140);
-            this.txt_Stock.Name = "txt_Stock";
-            this.txt_Stock.Size = new System.Drawing.Size(220, 23);
-            this.txt_Stock.TabIndex = 78;
-            this.txt_Stock.Text = "0";
-            this.txt_Stock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Total_Valor_Compra
-            // 
-            this.txt_Total_Valor_Compra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Total_Valor_Compra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.txt_Total_Valor_Compra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txt_Total_Valor_Compra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Total_Valor_Compra.ForeColor = System.Drawing.Color.White;
-            this.txt_Total_Valor_Compra.Location = new System.Drawing.Point(141, 228);
-            this.txt_Total_Valor_Compra.Name = "txt_Total_Valor_Compra";
-            this.txt_Total_Valor_Compra.Size = new System.Drawing.Size(135, 23);
-            this.txt_Total_Valor_Compra.TabIndex = 80;
-            this.txt_Total_Valor_Compra.Text = "$";
-            this.txt_Total_Valor_Compra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 23);
-            this.label2.TabIndex = 79;
-            this.label2.Text = "TOTAL V. COMPRA:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Total_Valor_Venta
-            // 
-            this.txt_Total_Valor_Venta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Total_Valor_Venta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.txt_Total_Valor_Venta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txt_Total_Valor_Venta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Total_Valor_Venta.ForeColor = System.Drawing.Color.White;
-            this.txt_Total_Valor_Venta.Location = new System.Drawing.Point(416, 228);
-            this.txt_Total_Valor_Venta.Name = "txt_Total_Valor_Venta";
-            this.txt_Total_Valor_Venta.Size = new System.Drawing.Size(135, 23);
-            this.txt_Total_Valor_Venta.TabIndex = 82;
-            this.txt_Total_Valor_Venta.Text = "$";
-            this.txt_Total_Valor_Venta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(316, 228);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 23);
-            this.label4.TabIndex = 81;
-            this.label4.Text = "TOTAL V. VENTA:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Total_Ganancias
-            // 
-            this.txt_Total_Ganancias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Total_Ganancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.txt_Total_Ganancias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txt_Total_Ganancias.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Total_Ganancias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
-            this.txt_Total_Ganancias.Location = new System.Drawing.Point(705, 228);
-            this.txt_Total_Ganancias.Name = "txt_Total_Ganancias";
-            this.txt_Total_Ganancias.Size = new System.Drawing.Size(135, 23);
-            this.txt_Total_Ganancias.TabIndex = 84;
-            this.txt_Total_Ganancias.Text = "$";
-            this.txt_Total_Ganancias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(586, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 23);
-            this.label6.TabIndex = 83;
-            this.label6.Text = "TOTAL GANANCIAS:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btn_Cancelar
-            // 
-            this.btn_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
-            this.btn_Cancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
-            this.btn_Cancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Cancelar.BorderRadius = 20;
-            this.btn_Cancelar.BorderSize = 0;
-            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
-            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancelar.Location = new System.Drawing.Point(735, 213);
-            this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Cancelar.TabIndex = 76;
-            this.btn_Cancelar.Text = "CANCELAR";
-            this.btn_Cancelar.TextColor = System.Drawing.Color.White;
-            this.btn_Cancelar.UseVisualStyleBackColor = false;
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
-            // 
-            // btn_Eliminar
-            // 
-            this.btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btn_Eliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btn_Eliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Eliminar.BorderRadius = 20;
-            this.btn_Eliminar.BorderSize = 0;
-            this.btn_Eliminar.Enabled = false;
-            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
-            this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.btn_Eliminar.Location = new System.Drawing.Point(735, 166);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Eliminar.TabIndex = 75;
-            this.btn_Eliminar.Text = "ELIMINAR";
-            this.btn_Eliminar.TextColor = System.Drawing.Color.White;
-            this.btn_Eliminar.UseVisualStyleBackColor = false;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
-            // 
-            // btn_Actualizar
-            // 
-            this.btn_Actualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btn_Actualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btn_Actualizar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Actualizar.BorderRadius = 20;
-            this.btn_Actualizar.BorderSize = 0;
-            this.btn_Actualizar.Enabled = false;
-            this.btn_Actualizar.FlatAppearance.BorderSize = 0;
-            this.btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Actualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Actualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Actualizar.Location = new System.Drawing.Point(735, 119);
-            this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Actualizar.TabIndex = 74;
-            this.btn_Actualizar.Text = "ACTUALIZAR";
-            this.btn_Actualizar.TextColor = System.Drawing.Color.White;
-            this.btn_Actualizar.UseVisualStyleBackColor = false;
-            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
-            // 
-            // btn_Guardar
-            // 
-            this.btn_Guardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Guardar.BackColor = System.Drawing.Color.Teal;
-            this.btn_Guardar.BackgroundColor = System.Drawing.Color.Teal;
-            this.btn_Guardar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Guardar.BorderRadius = 20;
-            this.btn_Guardar.BorderSize = 0;
-            this.btn_Guardar.Enabled = false;
-            this.btn_Guardar.FlatAppearance.BorderSize = 0;
-            this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Guardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar.Location = new System.Drawing.Point(735, 72);
-            this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(105, 40);
-            this.btn_Guardar.TabIndex = 73;
-            this.btn_Guardar.Text = "GUARDAR";
-            this.btn_Guardar.TextColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar.UseVisualStyleBackColor = false;
-            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
-            // 
-            // btn_Nuevo
-            // 
-            this.btn_Nuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
-            this.btn_Nuevo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
-            this.btn_Nuevo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Nuevo.BorderRadius = 20;
-            this.btn_Nuevo.BorderSize = 0;
-            this.btn_Nuevo.FlatAppearance.BorderSize = 0;
-            this.btn_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Nuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo.ForeColor = System.Drawing.Color.White;
-            this.btn_Nuevo.Location = new System.Drawing.Point(735, 25);
-            this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.Size = new System.Drawing.Size(105, 40);
-            this.btn_Nuevo.TabIndex = 72;
-            this.btn_Nuevo.Text = "NUEVO";
-            this.btn_Nuevo.TextColor = System.Drawing.Color.White;
-            this.btn_Nuevo.UseVisualStyleBackColor = false;
-            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
-            // 
-            // btn_Volver
-            // 
-            this.btn_Volver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.btn_Volver.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.btn_Volver.BorderColor = System.Drawing.Color.Empty;
-            this.btn_Volver.BorderRadius = 20;
-            this.btn_Volver.BorderSize = 0;
-            this.btn_Volver.FlatAppearance.BorderSize = 0;
-            this.btn_Volver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
-            this.btn_Volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Volver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.ForeColor = System.Drawing.Color.White;
-            this.btn_Volver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Volver.Location = new System.Drawing.Point(738, 13);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(99, 39);
-            this.btn_Volver.TabIndex = 31;
-            this.btn_Volver.Text = "VOLVER";
-            this.btn_Volver.TextColor = System.Drawing.Color.White;
-            this.btn_Volver.UseVisualStyleBackColor = false;
-            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            this.txt_Buscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_Buscar.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Buscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Buscar.Location = new System.Drawing.Point(91, 15);
+            this.txt_Buscar.Name = "txt_Buscar";
+            this.txt_Buscar.Size = new System.Drawing.Size(350, 23);
+            this.txt_Buscar.TabIndex = 54;
+            this.txt_Buscar.TextChanged += new System.EventHandler(this.txt_Buscar_TextChanged);
             // 
             // GUI_RegistroInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(884, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.pnl_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_RegistroInventario";

@@ -32,19 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Principal));
             this.pnl_Principal = new System.Windows.Forms.Panel();
             this.pnl_Formularios = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_tipoUser = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
             this.img_Logo = new System.Windows.Forms.PictureBox();
             this.pnl_Pie = new System.Windows.Forms.Panel();
             this.lbl_Hora = new System.Windows.Forms.Label();
             this.lbl_Fecha = new System.Windows.Forms.Label();
+            this.panel_Lateral = new System.Windows.Forms.Panel();
             this.pnl_Cabecera = new System.Windows.Forms.Panel();
             this.btn_Menu = new System.Windows.Forms.PictureBox();
             this.btn_Minimizar = new Proyecto_PV.Resources.Botones();
             this.btn_Cerrar = new Proyecto_PV.Resources.Botones();
-            this.btn_Maximizar = new Proyecto_PV.Resources.Botones();
             this.btn_Restaurar = new Proyecto_PV.Resources.Botones();
+            this.btn_Maximizar = new Proyecto_PV.Resources.Botones();
             this.pnl_Menu = new System.Windows.Forms.Panel();
             this.pnl_SubConfi = new System.Windows.Forms.Panel();
             this.pnl_DecSubConfi = new System.Windows.Forms.Panel();
@@ -102,36 +102,27 @@
             this.pnl_Principal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnl_Principal.Controls.Add(this.pnl_Formularios);
             this.pnl_Principal.Controls.Add(this.pnl_Pie);
+            this.pnl_Principal.Controls.Add(this.panel_Lateral);
             this.pnl_Principal.Controls.Add(this.pnl_Cabecera);
             this.pnl_Principal.Controls.Add(this.pnl_Menu);
             this.pnl_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Principal.Location = new System.Drawing.Point(0, 0);
             this.pnl_Principal.Name = "pnl_Principal";
-            this.pnl_Principal.Size = new System.Drawing.Size(1104, 680);
+            this.pnl_Principal.Size = new System.Drawing.Size(1220, 680);
             this.pnl_Principal.TabIndex = 0;
             // 
             // pnl_Formularios
             // 
             this.pnl_Formularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
-            this.pnl_Formularios.Controls.Add(this.panel1);
             this.pnl_Formularios.Controls.Add(this.lbl_tipoUser);
             this.pnl_Formularios.Controls.Add(this.lbl_User);
             this.pnl_Formularios.Controls.Add(this.img_Logo);
             this.pnl_Formularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Formularios.Location = new System.Drawing.Point(200, 50);
             this.pnl_Formularios.Name = "pnl_Formularios";
-            this.pnl_Formularios.Size = new System.Drawing.Size(904, 600);
+            this.pnl_Formularios.Size = new System.Drawing.Size(1000, 600);
             this.pnl_Formularios.TabIndex = 3;
             this.pnl_Formularios.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Formularios_MouseMove);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(884, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(20, 600);
-            this.panel1.TabIndex = 3;
             // 
             // lbl_tipoUser
             // 
@@ -139,7 +130,7 @@
             this.lbl_tipoUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tipoUser.ForeColor = System.Drawing.Color.Silver;
             this.lbl_tipoUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_tipoUser.Location = new System.Drawing.Point(664, 47);
+            this.lbl_tipoUser.Location = new System.Drawing.Point(765, 47);
             this.lbl_tipoUser.Name = "lbl_tipoUser";
             this.lbl_tipoUser.Size = new System.Drawing.Size(200, 20);
             this.lbl_tipoUser.TabIndex = 2;
@@ -152,7 +143,7 @@
             this.lbl_User.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_User.ForeColor = System.Drawing.Color.Silver;
             this.lbl_User.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_User.Location = new System.Drawing.Point(614, 24);
+            this.lbl_User.Location = new System.Drawing.Point(715, 24);
             this.lbl_User.Name = "lbl_User";
             this.lbl_User.Size = new System.Drawing.Size(250, 20);
             this.lbl_User.TabIndex = 1;
@@ -162,8 +153,8 @@
             // img_Logo
             // 
             this.img_Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.img_Logo.Image = global::Proyecto_PV.Properties.Resources.LOGO_PV_Black_1;
-            this.img_Logo.Location = new System.Drawing.Point(132, 172);
+            this.img_Logo.Image = ((System.Drawing.Image)(resources.GetObject("img_Logo.Image")));
+            this.img_Logo.Location = new System.Drawing.Point(180, 172);
             this.img_Logo.Name = "img_Logo";
             this.img_Logo.Size = new System.Drawing.Size(640, 256);
             this.img_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,7 +169,7 @@
             this.pnl_Pie.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Pie.Location = new System.Drawing.Point(200, 650);
             this.pnl_Pie.Name = "pnl_Pie";
-            this.pnl_Pie.Size = new System.Drawing.Size(904, 30);
+            this.pnl_Pie.Size = new System.Drawing.Size(1000, 30);
             this.pnl_Pie.TabIndex = 2;
             this.pnl_Pie.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Pie_MouseMove);
             // 
@@ -189,7 +180,7 @@
             this.lbl_Hora.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Hora.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Hora.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_Hora.Location = new System.Drawing.Point(806, 9);
+            this.lbl_Hora.Location = new System.Drawing.Point(913, 9);
             this.lbl_Hora.Name = "lbl_Hora";
             this.lbl_Hora.Size = new System.Drawing.Size(32, 13);
             this.lbl_Hora.TabIndex = 2;
@@ -202,11 +193,20 @@
             this.lbl_Fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Fecha.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_Fecha.Location = new System.Drawing.Point(601, 9);
+            this.lbl_Fecha.Location = new System.Drawing.Point(708, 9);
             this.lbl_Fecha.Name = "lbl_Fecha";
             this.lbl_Fecha.Size = new System.Drawing.Size(37, 13);
             this.lbl_Fecha.TabIndex = 1;
             this.lbl_Fecha.Text = "Fecha";
+            // 
+            // panel_Lateral
+            // 
+            this.panel_Lateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.panel_Lateral.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_Lateral.Location = new System.Drawing.Point(1200, 50);
+            this.panel_Lateral.Name = "panel_Lateral";
+            this.panel_Lateral.Size = new System.Drawing.Size(20, 630);
+            this.panel_Lateral.TabIndex = 3;
             // 
             // pnl_Cabecera
             // 
@@ -214,19 +214,19 @@
             this.pnl_Cabecera.Controls.Add(this.btn_Menu);
             this.pnl_Cabecera.Controls.Add(this.btn_Minimizar);
             this.pnl_Cabecera.Controls.Add(this.btn_Cerrar);
-            this.pnl_Cabecera.Controls.Add(this.btn_Maximizar);
             this.pnl_Cabecera.Controls.Add(this.btn_Restaurar);
+            this.pnl_Cabecera.Controls.Add(this.btn_Maximizar);
             this.pnl_Cabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Cabecera.Location = new System.Drawing.Point(200, 0);
             this.pnl_Cabecera.Name = "pnl_Cabecera";
-            this.pnl_Cabecera.Size = new System.Drawing.Size(904, 50);
+            this.pnl_Cabecera.Size = new System.Drawing.Size(1020, 50);
             this.pnl_Cabecera.TabIndex = 1;
             this.pnl_Cabecera.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Cabecera_MouseMove);
             // 
             // btn_Menu
             // 
             this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Menu.Image = global::Proyecto_PV.Properties.Resources.Desplegable;
+            this.btn_Menu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Menu.Image")));
             this.btn_Menu.Location = new System.Drawing.Point(6, 13);
             this.btn_Menu.Name = "btn_Menu";
             this.btn_Menu.Size = new System.Drawing.Size(35, 25);
@@ -249,8 +249,8 @@
             this.btn_Minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
             this.btn_Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Minimizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Minimizar.Image = global::Proyecto_PV.Properties.Resources.Minimizar;
-            this.btn_Minimizar.Location = new System.Drawing.Point(756, 12);
+            this.btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minimizar.Image")));
+            this.btn_Minimizar.Location = new System.Drawing.Point(872, 12);
             this.btn_Minimizar.Name = "btn_Minimizar";
             this.btn_Minimizar.Size = new System.Drawing.Size(35, 28);
             this.btn_Minimizar.TabIndex = 19;
@@ -273,36 +273,13 @@
             this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
-            this.btn_Cerrar.Location = new System.Drawing.Point(846, 12);
+            this.btn_Cerrar.Location = new System.Drawing.Point(962, 12);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(35, 28);
             this.btn_Cerrar.TabIndex = 17;
             this.btn_Cerrar.TextColor = System.Drawing.Color.White;
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
-            // 
-            // btn_Maximizar
-            // 
-            this.btn_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Maximizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Maximizar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Maximizar.BorderRadius = 6;
-            this.btn_Maximizar.BorderSize = 0;
-            this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Maximizar.FlatAppearance.BorderSize = 0;
-            this.btn_Maximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btn_Maximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
-            this.btn_Maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Maximizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Maximizar.Image = global::Proyecto_PV.Properties.Resources.Maximizar;
-            this.btn_Maximizar.Location = new System.Drawing.Point(800, 12);
-            this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(35, 28);
-            this.btn_Maximizar.TabIndex = 18;
-            this.btn_Maximizar.TextColor = System.Drawing.Color.White;
-            this.btn_Maximizar.UseVisualStyleBackColor = false;
-            this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
             // 
             // btn_Restaurar
             // 
@@ -318,8 +295,8 @@
             this.btn_Restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
             this.btn_Restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Restaurar.ForeColor = System.Drawing.Color.White;
-            this.btn_Restaurar.Image = global::Proyecto_PV.Properties.Resources.Restaurar;
-            this.btn_Restaurar.Location = new System.Drawing.Point(800, 12);
+            this.btn_Restaurar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Restaurar.Image")));
+            this.btn_Restaurar.Location = new System.Drawing.Point(916, 12);
             this.btn_Restaurar.Name = "btn_Restaurar";
             this.btn_Restaurar.Size = new System.Drawing.Size(35, 28);
             this.btn_Restaurar.TabIndex = 20;
@@ -327,6 +304,29 @@
             this.btn_Restaurar.UseVisualStyleBackColor = false;
             this.btn_Restaurar.Visible = false;
             this.btn_Restaurar.Click += new System.EventHandler(this.btn_Restaurar_Click);
+            // 
+            // btn_Maximizar
+            // 
+            this.btn_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Maximizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Maximizar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Maximizar.BorderRadius = 6;
+            this.btn_Maximizar.BorderSize = 0;
+            this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Maximizar.FlatAppearance.BorderSize = 0;
+            this.btn_Maximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btn_Maximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
+            this.btn_Maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Maximizar.ForeColor = System.Drawing.Color.White;
+            this.btn_Maximizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maximizar.Image")));
+            this.btn_Maximizar.Location = new System.Drawing.Point(916, 12);
+            this.btn_Maximizar.Name = "btn_Maximizar";
+            this.btn_Maximizar.Size = new System.Drawing.Size(35, 28);
+            this.btn_Maximizar.TabIndex = 18;
+            this.btn_Maximizar.TextColor = System.Drawing.Color.White;
+            this.btn_Maximizar.UseVisualStyleBackColor = false;
+            this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
             // 
             // pnl_Menu
             // 
@@ -389,7 +389,7 @@
             this.btn_Empresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Empresa.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Empresa.ForeColor = System.Drawing.Color.White;
-            this.btn_Empresa.Image = global::Proyecto_PV.Properties.Resources.Empresa_;
+            this.btn_Empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_Empresa.Image")));
             this.btn_Empresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Empresa.Location = new System.Drawing.Point(0, 50);
             this.btn_Empresa.Name = "btn_Empresa";
@@ -409,7 +409,7 @@
             this.btn_Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Usuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Usuarios.ForeColor = System.Drawing.Color.White;
-            this.btn_Usuarios.Image = global::Proyecto_PV.Properties.Resources.Usuario;
+            this.btn_Usuarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_Usuarios.Image")));
             this.btn_Usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Usuarios.Location = new System.Drawing.Point(0, 0);
             this.btn_Usuarios.Name = "btn_Usuarios";
@@ -436,7 +436,7 @@
             this.btn_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Configuracion.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Configuracion.ForeColor = System.Drawing.Color.White;
-            this.btn_Configuracion.Image = global::Proyecto_PV.Properties.Resources.Icon_Confi;
+            this.btn_Configuracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_Configuracion.Image")));
             this.btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Configuracion.Location = new System.Drawing.Point(0, 500);
             this.btn_Configuracion.Name = "btn_Configuracion";
@@ -495,7 +495,7 @@
             this.btn_Gastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Gastos.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Gastos.ForeColor = System.Drawing.Color.White;
-            this.btn_Gastos.Image = global::Proyecto_PV.Properties.Resources.Icon_Gastos;
+            this.btn_Gastos.Image = ((System.Drawing.Image)(resources.GetObject("btn_Gastos.Image")));
             this.btn_Gastos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Gastos.Location = new System.Drawing.Point(0, 450);
             this.btn_Gastos.Name = "btn_Gastos";
@@ -521,7 +521,7 @@
             this.btn_Proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Proveedores.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Proveedores.ForeColor = System.Drawing.Color.White;
-            this.btn_Proveedores.Image = global::Proyecto_PV.Properties.Resources.Icon_Prove;
+            this.btn_Proveedores.Image = ((System.Drawing.Image)(resources.GetObject("btn_Proveedores.Image")));
             this.btn_Proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Proveedores.Location = new System.Drawing.Point(0, 400);
             this.btn_Proveedores.Name = "btn_Proveedores";
@@ -540,7 +540,7 @@
             this.btn_Creditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Creditos.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Creditos.ForeColor = System.Drawing.Color.White;
-            this.btn_Creditos.Image = global::Proyecto_PV.Properties.Resources.Icon_Creditos;
+            this.btn_Creditos.Image = ((System.Drawing.Image)(resources.GetObject("btn_Creditos.Image")));
             this.btn_Creditos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Creditos.Location = new System.Drawing.Point(0, 350);
             this.btn_Creditos.Name = "btn_Creditos";
@@ -558,7 +558,7 @@
             this.btn_TotalVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TotalVentas.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TotalVentas.ForeColor = System.Drawing.Color.White;
-            this.btn_TotalVentas.Image = global::Proyecto_PV.Properties.Resources.IconV;
+            this.btn_TotalVentas.Image = ((System.Drawing.Image)(resources.GetObject("btn_TotalVentas.Image")));
             this.btn_TotalVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TotalVentas.Location = new System.Drawing.Point(0, 300);
             this.btn_TotalVentas.Name = "btn_TotalVentas";
@@ -597,7 +597,7 @@
             this.btn_ConsultarClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarClient.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConsultarClient.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarClient.Image = global::Proyecto_PV.Properties.Resources.ShowClient;
+            this.btn_ConsultarClient.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConsultarClient.Image")));
             this.btn_ConsultarClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ConsultarClient.Location = new System.Drawing.Point(0, 50);
             this.btn_ConsultarClient.Name = "btn_ConsultarClient";
@@ -617,7 +617,7 @@
             this.btn_RegistrarClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RegistrarClient.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RegistrarClient.ForeColor = System.Drawing.Color.White;
-            this.btn_RegistrarClient.Image = global::Proyecto_PV.Properties.Resources.NewClient;
+            this.btn_RegistrarClient.Image = ((System.Drawing.Image)(resources.GetObject("btn_RegistrarClient.Image")));
             this.btn_RegistrarClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RegistrarClient.Location = new System.Drawing.Point(0, 0);
             this.btn_RegistrarClient.Name = "btn_RegistrarClient";
@@ -697,7 +697,7 @@
             this.btn_Descuento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Descuento.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Descuento.ForeColor = System.Drawing.Color.White;
-            this.btn_Descuento.Image = global::Proyecto_PV.Properties.Resources.Des_;
+            this.btn_Descuento.Image = ((System.Drawing.Image)(resources.GetObject("btn_Descuento.Image")));
             this.btn_Descuento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Descuento.Location = new System.Drawing.Point(0, 150);
             this.btn_Descuento.Name = "btn_Descuento";
@@ -717,7 +717,7 @@
             this.bnt_BodegaInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnt_BodegaInv.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_BodegaInv.ForeColor = System.Drawing.Color.White;
-            this.bnt_BodegaInv.Image = global::Proyecto_PV.Properties.Resources.Bod;
+            this.bnt_BodegaInv.Image = ((System.Drawing.Image)(resources.GetObject("bnt_BodegaInv.Image")));
             this.bnt_BodegaInv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bnt_BodegaInv.Location = new System.Drawing.Point(0, 100);
             this.bnt_BodegaInv.Name = "bnt_BodegaInv";
@@ -737,7 +737,7 @@
             this.btn_ConsultaInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultaInv.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConsultaInv.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultaInv.Image = global::Proyecto_PV.Properties.Resources.ShowInv;
+            this.btn_ConsultaInv.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConsultaInv.Image")));
             this.btn_ConsultaInv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ConsultaInv.Location = new System.Drawing.Point(0, 50);
             this.btn_ConsultaInv.Name = "btn_ConsultaInv";
@@ -757,7 +757,7 @@
             this.btn_RegistroInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RegistroInv.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RegistroInv.ForeColor = System.Drawing.Color.White;
-            this.btn_RegistroInv.Image = global::Proyecto_PV.Properties.Resources.NewInv;
+            this.btn_RegistroInv.Image = ((System.Drawing.Image)(resources.GetObject("btn_RegistroInv.Image")));
             this.btn_RegistroInv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RegistroInv.Location = new System.Drawing.Point(0, 0);
             this.btn_RegistroInv.Name = "btn_RegistroInv";
@@ -792,7 +792,7 @@
             this.btn_Inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Inventario.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Inventario.ForeColor = System.Drawing.Color.White;
-            this.btn_Inventario.Image = global::Proyecto_PV.Properties.Resources.Icon_Inv;
+            this.btn_Inventario.Image = ((System.Drawing.Image)(resources.GetObject("btn_Inventario.Image")));
             this.btn_Inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventario.Location = new System.Drawing.Point(0, 150);
             this.btn_Inventario.Name = "btn_Inventario";
@@ -813,7 +813,7 @@
             this.btn_PuntoVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PuntoVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_PuntoVenta.ForeColor = System.Drawing.Color.White;
-            this.btn_PuntoVenta.Image = global::Proyecto_PV.Properties.Resources.Logo_PV;
+            this.btn_PuntoVenta.Image = ((System.Drawing.Image)(resources.GetObject("btn_PuntoVenta.Image")));
             this.btn_PuntoVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_PuntoVenta.Location = new System.Drawing.Point(0, 100);
             this.btn_PuntoVenta.MinimumSize = new System.Drawing.Size(55, 50);
@@ -837,7 +837,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Proyecto_PV.Properties.Resources.PuntoVenta;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(75, 24);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(84, 52);
@@ -847,7 +847,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Proyecto_PV.Properties.Resources.PV_M;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(6, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 52);
@@ -864,7 +864,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 680);
+            this.ClientSize = new System.Drawing.Size(1220, 680);
             this.Controls.Add(this.pnl_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -944,6 +944,6 @@
         private System.Windows.Forms.Panel pnl_DecSubInv;
         private System.Windows.Forms.Panel pnl_DecSubConfi;
         private System.Windows.Forms.Panel pnl_DecSubClient;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_Lateral;
     }
 }

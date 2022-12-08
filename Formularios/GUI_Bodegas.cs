@@ -282,7 +282,7 @@ namespace Proyecto_PV.Formularios
             }
             else
             {
-                string cadena = "SELECT * FROM `bodega` WHERE `cod_bod` = @code";
+                string cadena = "SELECT `cod_bod`, `desc_bod` FROM `bodega` WHERE `cod_bod` = @code";
                 MySqlCommand command = new MySqlCommand(cadena, conexion);
                 command.Parameters.Add("@code", MySqlDbType.VarChar).Value = txt_CodigoBod.Text;
                 command.CommandTimeout = 60;

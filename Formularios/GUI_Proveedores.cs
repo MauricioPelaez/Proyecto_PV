@@ -327,7 +327,7 @@ namespace Proyecto_PV.Formularios
             }
             else
             {
-                string query = "SELECT * FROM `proveedor` WHERE `nit_prov` = @nit";
+                string query = "SELECT `nit_prov`, `nom_provee`, `mail_prov`, `tel_prov`, `func_prov`  FROM `proveedor` WHERE `nit_prov` = @nit";
                 MySqlCommand command = new MySqlCommand(query, conexion);
                 command.Parameters.Add("@nit", MySqlDbType.VarChar).Value = txt_Nit.Text;
                 command.CommandTimeout = 60;

@@ -70,7 +70,7 @@
             this.pnl_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Principal.Location = new System.Drawing.Point(0, 0);
             this.pnl_Principal.Name = "pnl_Principal";
-            this.pnl_Principal.Size = new System.Drawing.Size(884, 600);
+            this.pnl_Principal.Size = new System.Drawing.Size(1000, 600);
             this.pnl_Principal.TabIndex = 0;
             // 
             // pnl_Datos
@@ -86,7 +86,7 @@
             this.pnl_Datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Datos.Location = new System.Drawing.Point(0, 65);
             this.pnl_Datos.Name = "pnl_Datos";
-            this.pnl_Datos.Size = new System.Drawing.Size(880, 271);
+            this.pnl_Datos.Size = new System.Drawing.Size(996, 271);
             this.pnl_Datos.TabIndex = 2;
             // 
             // btn_Cancelar
@@ -101,7 +101,7 @@
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancelar.Location = new System.Drawing.Point(732, 211);
+            this.btn_Cancelar.Location = new System.Drawing.Point(790, 211);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(105, 40);
             this.btn_Cancelar.TabIndex = 86;
@@ -123,7 +123,7 @@
             this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.btn_Eliminar.Location = new System.Drawing.Point(732, 164);
+            this.btn_Eliminar.Location = new System.Drawing.Point(790, 164);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(105, 40);
             this.btn_Eliminar.TabIndex = 85;
@@ -145,7 +145,7 @@
             this.btn_Actualiazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Actualiazar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Actualiazar.ForeColor = System.Drawing.Color.White;
-            this.btn_Actualiazar.Location = new System.Drawing.Point(732, 117);
+            this.btn_Actualiazar.Location = new System.Drawing.Point(790, 117);
             this.btn_Actualiazar.Name = "btn_Actualiazar";
             this.btn_Actualiazar.Size = new System.Drawing.Size(105, 40);
             this.btn_Actualiazar.TabIndex = 84;
@@ -167,7 +167,7 @@
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Guardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar.Location = new System.Drawing.Point(732, 70);
+            this.btn_Guardar.Location = new System.Drawing.Point(790, 70);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(105, 40);
             this.btn_Guardar.TabIndex = 83;
@@ -188,7 +188,7 @@
             this.btn_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Nuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Nuevo.ForeColor = System.Drawing.Color.White;
-            this.btn_Nuevo.Location = new System.Drawing.Point(732, 23);
+            this.btn_Nuevo.Location = new System.Drawing.Point(790, 23);
             this.btn_Nuevo.Name = "btn_Nuevo";
             this.btn_Nuevo.Size = new System.Drawing.Size(105, 40);
             this.btn_Nuevo.TabIndex = 82;
@@ -209,7 +209,7 @@
             this.gb_DatosProv.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gb_DatosProv.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_DatosProv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
-            this.gb_DatosProv.Location = new System.Drawing.Point(31, 21);
+            this.gb_DatosProv.Location = new System.Drawing.Point(95, 21);
             this.gb_DatosProv.Name = "gb_DatosProv";
             this.gb_DatosProv.Size = new System.Drawing.Size(537, 223);
             this.gb_DatosProv.TabIndex = 73;
@@ -286,7 +286,7 @@
             this.pnl_Inferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Inferior.Location = new System.Drawing.Point(0, 336);
             this.pnl_Inferior.Name = "pnl_Inferior";
-            this.pnl_Inferior.Size = new System.Drawing.Size(880, 260);
+            this.pnl_Inferior.Size = new System.Drawing.Size(996, 260);
             this.pnl_Inferior.TabIndex = 1;
             // 
             // lbl_NRegistros
@@ -294,7 +294,7 @@
             this.lbl_NRegistros.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_NRegistros.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NRegistros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_NRegistros.Location = new System.Drawing.Point(690, 20);
+            this.lbl_NRegistros.Location = new System.Drawing.Point(806, 20);
             this.lbl_NRegistros.Name = "lbl_NRegistros";
             this.lbl_NRegistros.Size = new System.Drawing.Size(150, 23);
             this.lbl_NRegistros.TabIndex = 64;
@@ -361,7 +361,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.DGV_Bodegas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_Bodegas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Bodegas.Size = new System.Drawing.Size(809, 178);
+            this.DGV_Bodegas.Size = new System.Drawing.Size(925, 178);
             this.DGV_Bodegas.TabIndex = 61;
             this.DGV_Bodegas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Bodegas_CellClick);
             // 
@@ -374,7 +374,7 @@
             this.pnl_Cabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Cabecera.Location = new System.Drawing.Point(0, 0);
             this.pnl_Cabecera.Name = "pnl_Cabecera";
-            this.pnl_Cabecera.Size = new System.Drawing.Size(880, 65);
+            this.pnl_Cabecera.Size = new System.Drawing.Size(996, 65);
             this.pnl_Cabecera.TabIndex = 0;
             // 
             // btn_Volver
@@ -391,7 +391,7 @@
             this.btn_Volver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Volver.ForeColor = System.Drawing.Color.White;
             this.btn_Volver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Volver.Location = new System.Drawing.Point(738, 13);
+            this.btn_Volver.Location = new System.Drawing.Point(854, 13);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(99, 39);
             this.btn_Volver.TabIndex = 35;
@@ -405,7 +405,7 @@
             this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_Titulo.Location = new System.Drawing.Point(-1, 13);
+            this.lbl_Titulo.Location = new System.Drawing.Point(57, 13);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(879, 34);
             this.lbl_Titulo.TabIndex = 34;
@@ -417,7 +417,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(884, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.pnl_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_Bodegas";

@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Mauricio Pelaez\Desktop\PV\</PublishUrl>
+    <PublishUrl>C:\Punto_Venta\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -101,6 +101,12 @@
     <Compile Include="Formularios\GUI_RegistroInventario.Designer.cs">
       <DependentUpon>GUI_RegistroInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\GUI_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GUI_Inventario.Designer.cs">
+      <DependentUpon>GUI_Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\GUI_RegistroInventario.resx">
       <DependentUpon>GUI_RegistroInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GUI_Inventario.resx">
+      <DependentUpon>GUI_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\GUI_Principal.resx">
       <DependentUpon>GUI_Principal.cs</DependentUpon>
@@ -179,48 +188,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Gato_negro.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Maximizar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Restaurar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimizar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Cat.ico" />
     <Content Include="M.ico" />
     <Content Include="PV.ico" />
     <Content Include="PV_.ico" />
-    <None Include="Resources\IconInventario.png" />
-    <None Include="Resources\Proveedores.png" />
-    <None Include="Resources\Icon_Gastos.png" />
-    <None Include="Resources\Icon_Creditos.png" />
-    <None Include="Resources\Icon_Prove.png" />
-    <None Include="Resources\IconV.png" />
-    <None Include="Resources\Icon_Inv.png" />
-    <None Include="Resources\Icon_Confi.png" />
-    <None Include="Resources\Logo_PV.png" />
-    <None Include="Resources\Bod.png" />
-    <None Include="Resources\ShowInv.png" />
-    <None Include="Resources\NewInv.png" />
-    <None Include="Resources\Des_.png" />
-    <None Include="Resources\ShowClient.png" />
-    <None Include="Resources\NewClient.png" />
-    <None Include="Resources\Empresa_.png" />
-    <None Include="Resources\Usuario.png" />
-    <None Include="Resources\PuntoVenta.png" />
-    <None Include="Resources\LOGO PV%28Black%291.png" />
-    <None Include="Resources\Bodegas.png" />
-    <None Include="Resources\C_Inventario.png" />
-    <None Include="Resources\Desplegable.png" />
-    <None Include="Resources\PV_M.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
