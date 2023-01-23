@@ -444,13 +444,12 @@ namespace Proyecto_PV.Formularios
             }
             catch (SqlException ex)
             {
-                System.Diagnostics.Debug.WriteLine("Error en la busqueda dinamica de los productos...");
+                System.Diagnostics.Debug.WriteLine("Error en la busqueda dinamica de las bodegas...");
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
 
             }
 
             NRegistros();
-            DGV_Productos.ClearSelection();
 
             if (conexion.State == ConnectionState.Open)
             {

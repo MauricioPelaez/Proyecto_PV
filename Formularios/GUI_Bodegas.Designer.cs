@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Bodegas));
             this.pnl_Principal = new System.Windows.Forms.Panel();
             this.pnl_Datos = new System.Windows.Forms.Panel();
             this.btn_Cancelar = new Proyecto_PV.Resources.Botones();
@@ -53,14 +52,12 @@
             this.pnl_Cabecera = new System.Windows.Forms.Panel();
             this.btn_Volver = new Proyecto_PV.Resources.Botones();
             this.lbl_Titulo = new System.Windows.Forms.Label();
-            this.img_Logo = new System.Windows.Forms.PictureBox();
             this.pnl_Principal.SuspendLayout();
             this.pnl_Datos.SuspendLayout();
             this.gb_DatosProv.SuspendLayout();
             this.pnl_Inferior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Bodegas)).BeginInit();
             this.pnl_Cabecera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Principal
@@ -372,7 +369,6 @@
             // 
             this.pnl_Cabecera.BackColor = System.Drawing.Color.Silver;
             this.pnl_Cabecera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_Cabecera.Controls.Add(this.img_Logo);
             this.pnl_Cabecera.Controls.Add(this.btn_Volver);
             this.pnl_Cabecera.Controls.Add(this.lbl_Titulo);
             this.pnl_Cabecera.Dock = System.Windows.Forms.DockStyle.Top;
@@ -409,22 +405,12 @@
             this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_Titulo.Location = new System.Drawing.Point(-2, 13);
+            this.lbl_Titulo.Location = new System.Drawing.Point(57, 13);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(996, 34);
+            this.lbl_Titulo.Size = new System.Drawing.Size(879, 34);
             this.lbl_Titulo.TabIndex = 34;
             this.lbl_Titulo.Text = "BODEGAS";
             this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // img_Logo
-            // 
-            this.img_Logo.Image = ((System.Drawing.Image)(resources.GetObject("img_Logo.Image")));
-            this.img_Logo.Location = new System.Drawing.Point(28, 7);
-            this.img_Logo.Name = "img_Logo";
-            this.img_Logo.Size = new System.Drawing.Size(57, 50);
-            this.img_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_Logo.TabIndex = 37;
-            this.img_Logo.TabStop = false;
             // 
             // GUI_Bodegas
             // 
@@ -445,7 +431,6 @@
             this.pnl_Inferior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Bodegas)).EndInit();
             this.pnl_Cabecera.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,6 +458,5 @@
         private Resources.Botones btn_Guardar;
         private Resources.Botones btn_Nuevo;
         private System.Windows.Forms.Label lbl_NRegistros;
-        private System.Windows.Forms.PictureBox img_Logo;
     }
 }
