@@ -156,10 +156,10 @@ namespace Proyecto_PV.Views
             btn_ConteoCaja.Location = new Point(0, 400);
 
             pnl_Dec4.Location = new Point(0, 450);
-            btn_Clientes.Location = new Point(0, 450);
+            btn_Ventas.Location = new Point(0, 450);
 
             pnl_Dec5.Location = new Point(0, 500);
-            btn_TotalVentas.Location = new Point(0, 500);
+            btn_Clientes.Location = new Point(0, 500);
 
             pnl_Dec6.Location = new Point(0, 550);
             btn_Creditos.Location = new Point(0, 550);
@@ -183,10 +183,10 @@ namespace Proyecto_PV.Views
             btn_ConteoCaja.Location = new Point(0, 200);
 
             pnl_Dec4.Location = new Point(0, 250);
-            btn_Clientes.Location = new Point(0, 250);
+            btn_Ventas.Location = new Point(0, 250);
 
             pnl_Dec5.Location = new Point(0, 300);
-            btn_TotalVentas.Location = new Point(0, 300);
+            btn_Clientes.Location = new Point(0, 300);
 
             pnl_Dec6.Location = new Point(0, 350);
             btn_Creditos.Location = new Point(0, 350);
@@ -219,11 +219,11 @@ namespace Proyecto_PV.Views
         #region Mostrar / Ocultar SubClientes
         private void Mostrar_SubClient()
         {
-            pnl_subClient.Visible = true;
-            pnl_subClient.Height = 100;
+            pnl_subVentas.Visible = true;
+            pnl_subVentas.Height = 100;
 
             pnl_Dec5.Location = new Point(0, 400);
-            btn_TotalVentas.Location = new Point(0, 400);
+            btn_Clientes.Location = new Point(0, 400);
 
             pnl_Dec6.Location = new Point(0, 450);
             btn_Creditos.Location = new Point(0, 450);
@@ -240,11 +240,11 @@ namespace Proyecto_PV.Views
 
         private void Ocultar_SubClient()
         {
-            pnl_subClient.Visible = false;
-            pnl_subClient.Height = 0;
+            pnl_subVentas.Visible = false;
+            pnl_subVentas.Height = 0;
 
             pnl_Dec5.Location = new Point(0, 300);
-            btn_TotalVentas.Location = new Point(0, 300);
+            btn_Clientes.Location = new Point(0, 300);
 
             pnl_Dec6.Location = new Point(0, 350);
             btn_Creditos.Location = new Point(0, 350);
@@ -264,7 +264,7 @@ namespace Proyecto_PV.Views
             Ocultar_SubInv();
             Ocultar_SubConfi();
 
-            if(pnl_subClient.Height == 100)
+            if(pnl_subVentas.Height == 100)
             {
                 Ocultar_SubClient();
             }
@@ -407,9 +407,5 @@ namespace Proyecto_PV.Views
 
         #endregion
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            
-        }
     }
 }

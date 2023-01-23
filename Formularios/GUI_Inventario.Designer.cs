@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Inventario));
             this.panel_Principal = new System.Windows.Forms.Panel();
             this.panel_Cuerpo = new System.Windows.Forms.Panel();
             this.DGV_Inventario = new System.Windows.Forms.DataGridView();
@@ -46,13 +47,16 @@
             this.txt_Total_Valor_Compra = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_Cabecera = new System.Windows.Forms.Panel();
+            this.btn_Reporte_Inv = new Proyecto_PV.Resources.Botones();
             this.btn_Volver = new Proyecto_PV.Resources.Botones();
             this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.img_Logo = new System.Windows.Forms.PictureBox();
             this.panel_Principal.SuspendLayout();
             this.panel_Cuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Inventario)).BeginInit();
             this.panel_Inferior.SuspendLayout();
             this.pnl_Cabecera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Principal
@@ -85,8 +89,8 @@
             // 
             this.DGV_Inventario.AllowUserToAddRows = false;
             this.DGV_Inventario.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.DGV_Inventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.DGV_Inventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.DGV_Inventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -95,14 +99,14 @@
             this.DGV_Inventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.DGV_Inventario.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.DGV_Inventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Inventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Inventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.DGV_Inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Inventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DGV_Inventario.GridColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -111,23 +115,23 @@
             this.DGV_Inventario.Name = "DGV_Inventario";
             this.DGV_Inventario.ReadOnly = true;
             this.DGV_Inventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Inventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Inventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.DGV_Inventario.RowHeadersWidth = 25;
             this.DGV_Inventario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_Inventario.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle20.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_Inventario.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.DGV_Inventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Inventario.Size = new System.Drawing.Size(936, 400);
             this.DGV_Inventario.TabIndex = 69;
@@ -163,6 +167,7 @@
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(350, 23);
             this.txt_Buscar.TabIndex = 66;
+            this.txt_Buscar.TextChanged += new System.EventHandler(this.txt_Buscar_TextChanged);
             // 
             // panel_Inferior
             // 
@@ -262,6 +267,8 @@
             // 
             this.pnl_Cabecera.BackColor = System.Drawing.Color.Silver;
             this.pnl_Cabecera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_Cabecera.Controls.Add(this.img_Logo);
+            this.pnl_Cabecera.Controls.Add(this.btn_Reporte_Inv);
             this.pnl_Cabecera.Controls.Add(this.btn_Volver);
             this.pnl_Cabecera.Controls.Add(this.lbl_Titulo);
             this.pnl_Cabecera.Dock = System.Windows.Forms.DockStyle.Top;
@@ -269,6 +276,28 @@
             this.pnl_Cabecera.Name = "pnl_Cabecera";
             this.pnl_Cabecera.Size = new System.Drawing.Size(996, 65);
             this.pnl_Cabecera.TabIndex = 1;
+            // 
+            // btn_Reporte_Inv
+            // 
+            this.btn_Reporte_Inv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Reporte_Inv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.btn_Reporte_Inv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.btn_Reporte_Inv.BorderColor = System.Drawing.Color.Empty;
+            this.btn_Reporte_Inv.BorderRadius = 20;
+            this.btn_Reporte_Inv.BorderSize = 0;
+            this.btn_Reporte_Inv.FlatAppearance.BorderSize = 0;
+            this.btn_Reporte_Inv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.btn_Reporte_Inv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reporte_Inv.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reporte_Inv.ForeColor = System.Drawing.Color.White;
+            this.btn_Reporte_Inv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reporte_Inv.Location = new System.Drawing.Point(719, 13);
+            this.btn_Reporte_Inv.Name = "btn_Reporte_Inv";
+            this.btn_Reporte_Inv.Size = new System.Drawing.Size(99, 39);
+            this.btn_Reporte_Inv.TabIndex = 35;
+            this.btn_Reporte_Inv.Text = "REPORTE";
+            this.btn_Reporte_Inv.TextColor = System.Drawing.Color.White;
+            this.btn_Reporte_Inv.UseVisualStyleBackColor = false;
             // 
             // btn_Volver
             // 
@@ -298,12 +327,22 @@
             this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_Titulo.Location = new System.Drawing.Point(58, 13);
+            this.lbl_Titulo.Location = new System.Drawing.Point(-2, 13);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(880, 39);
+            this.lbl_Titulo.Size = new System.Drawing.Size(996, 39);
             this.lbl_Titulo.TabIndex = 34;
             this.lbl_Titulo.Text = "INVENTARIO";
             this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // img_Logo
+            // 
+            this.img_Logo.Image = ((System.Drawing.Image)(resources.GetObject("img_Logo.Image")));
+            this.img_Logo.Location = new System.Drawing.Point(28, 7);
+            this.img_Logo.Name = "img_Logo";
+            this.img_Logo.Size = new System.Drawing.Size(57, 50);
+            this.img_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_Logo.TabIndex = 36;
+            this.img_Logo.TabStop = false;
             // 
             // GUI_Inventario
             // 
@@ -314,12 +353,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_Inventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.GUI_Inventario_Load);
             this.panel_Principal.ResumeLayout(false);
             this.panel_Cuerpo.ResumeLayout(false);
             this.panel_Cuerpo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Inventario)).EndInit();
             this.panel_Inferior.ResumeLayout(false);
             this.pnl_Cabecera.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +382,7 @@
         private System.Windows.Forms.Label lbl_Buscar;
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.DataGridView DGV_Inventario;
+        private Resources.Botones btn_Reporte_Inv;
+        private System.Windows.Forms.PictureBox img_Logo;
     }
 }

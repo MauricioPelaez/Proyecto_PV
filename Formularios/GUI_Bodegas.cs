@@ -237,6 +237,7 @@ namespace Proyecto_PV.Formularios
             }
 
             NRegistros();
+            DGV_Bodegas.ClearSelection();
 
             if (conexion.State == ConnectionState.Open)
             {

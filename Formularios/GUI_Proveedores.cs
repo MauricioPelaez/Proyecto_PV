@@ -282,7 +282,7 @@ namespace Proyecto_PV.Formularios
             }
 
             NRegistros();
-
+            DGV_Proveedores.ClearSelection();
 
             if (conexion.State == ConnectionState.Open)
             {

@@ -61,12 +61,12 @@
             this.pnl_Dec7 = new System.Windows.Forms.Panel();
             this.btn_Proveedores = new System.Windows.Forms.Button();
             this.btn_Creditos = new System.Windows.Forms.Button();
-            this.btn_TotalVentas = new System.Windows.Forms.Button();
-            this.pnl_subClient = new System.Windows.Forms.Panel();
-            this.pnl_DecSubClient = new System.Windows.Forms.Panel();
-            this.btn_ConsultarClient = new System.Windows.Forms.Button();
-            this.btn_RegistrarClient = new System.Windows.Forms.Button();
             this.btn_Clientes = new System.Windows.Forms.Button();
+            this.pnl_subVentas = new System.Windows.Forms.Panel();
+            this.pnl_DecSubVentas = new System.Windows.Forms.Panel();
+            this.btn_Copia_Factura = new System.Windows.Forms.Button();
+            this.btn_Total_Ventas = new System.Windows.Forms.Button();
+            this.btn_Ventas = new System.Windows.Forms.Button();
             this.btn_ConteoCaja = new System.Windows.Forms.Button();
             this.pnl_SunInv = new System.Windows.Forms.Panel();
             this.pnl_DecSubInv = new System.Windows.Forms.Panel();
@@ -90,7 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
             this.pnl_Menu.SuspendLayout();
             this.pnl_SubConfi.SuspendLayout();
-            this.pnl_subClient.SuspendLayout();
+            this.pnl_subVentas.SuspendLayout();
             this.pnl_SunInv.SuspendLayout();
             this.pnl_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -180,7 +180,7 @@
             this.lbl_Hora.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Hora.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Hora.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_Hora.Location = new System.Drawing.Point(913, 9);
+            this.lbl_Hora.Location = new System.Drawing.Point(923, 9);
             this.lbl_Hora.Name = "lbl_Hora";
             this.lbl_Hora.Size = new System.Drawing.Size(32, 13);
             this.lbl_Hora.TabIndex = 2;
@@ -193,7 +193,7 @@
             this.lbl_Fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Fecha.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_Fecha.Location = new System.Drawing.Point(708, 9);
+            this.lbl_Fecha.Location = new System.Drawing.Point(766, 9);
             this.lbl_Fecha.Name = "lbl_Fecha";
             this.lbl_Fecha.Size = new System.Drawing.Size(37, 13);
             this.lbl_Fecha.TabIndex = 1;
@@ -343,9 +343,9 @@
             this.pnl_Menu.Controls.Add(this.pnl_Dec7);
             this.pnl_Menu.Controls.Add(this.btn_Proveedores);
             this.pnl_Menu.Controls.Add(this.btn_Creditos);
-            this.pnl_Menu.Controls.Add(this.btn_TotalVentas);
-            this.pnl_Menu.Controls.Add(this.pnl_subClient);
             this.pnl_Menu.Controls.Add(this.btn_Clientes);
+            this.pnl_Menu.Controls.Add(this.pnl_subVentas);
+            this.pnl_Menu.Controls.Add(this.btn_Ventas);
             this.pnl_Menu.Controls.Add(this.btn_ConteoCaja);
             this.pnl_Menu.Controls.Add(this.pnl_SunInv);
             this.pnl_Menu.Controls.Add(this.pnl_Dec2);
@@ -383,6 +383,7 @@
             // 
             // btn_Empresa
             // 
+            this.btn_Empresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Empresa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Empresa.FlatAppearance.BorderSize = 0;
             this.btn_Empresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
@@ -403,6 +404,7 @@
             // 
             // btn_Usuarios
             // 
+            this.btn_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Usuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Usuarios.FlatAppearance.BorderSize = 0;
             this.btn_Usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
@@ -431,6 +433,7 @@
             // 
             // btn_Configuracion
             // 
+            this.btn_Configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Configuracion.FlatAppearance.BorderSize = 0;
             this.btn_Configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
             this.btn_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -490,6 +493,7 @@
             // 
             // btn_Gastos
             // 
+            this.btn_Gastos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Gastos.FlatAppearance.BorderSize = 0;
             this.btn_Gastos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
             this.btn_Gastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -516,6 +520,7 @@
             // 
             // btn_Proveedores
             // 
+            this.btn_Proveedores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Proveedores.FlatAppearance.BorderSize = 0;
             this.btn_Proveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
             this.btn_Proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -535,6 +540,7 @@
             // 
             // btn_Creditos
             // 
+            this.btn_Creditos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Creditos.FlatAppearance.BorderSize = 0;
             this.btn_Creditos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
             this.btn_Creditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -551,86 +557,9 @@
             this.btn_Creditos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Creditos.UseVisualStyleBackColor = true;
             // 
-            // btn_TotalVentas
-            // 
-            this.btn_TotalVentas.FlatAppearance.BorderSize = 0;
-            this.btn_TotalVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.btn_TotalVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TotalVentas.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TotalVentas.ForeColor = System.Drawing.Color.White;
-            this.btn_TotalVentas.Image = ((System.Drawing.Image)(resources.GetObject("btn_TotalVentas.Image")));
-            this.btn_TotalVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TotalVentas.Location = new System.Drawing.Point(0, 300);
-            this.btn_TotalVentas.Name = "btn_TotalVentas";
-            this.btn_TotalVentas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_TotalVentas.Size = new System.Drawing.Size(200, 50);
-            this.btn_TotalVentas.TabIndex = 5;
-            this.btn_TotalVentas.Text = "       TOTAL VENTAS";
-            this.btn_TotalVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TotalVentas.UseVisualStyleBackColor = true;
-            // 
-            // pnl_subClient
-            // 
-            this.pnl_subClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.pnl_subClient.Controls.Add(this.pnl_DecSubClient);
-            this.pnl_subClient.Controls.Add(this.btn_ConsultarClient);
-            this.pnl_subClient.Controls.Add(this.btn_RegistrarClient);
-            this.pnl_subClient.Location = new System.Drawing.Point(0, 300);
-            this.pnl_subClient.Name = "pnl_subClient";
-            this.pnl_subClient.Size = new System.Drawing.Size(200, 0);
-            this.pnl_subClient.TabIndex = 1;
-            this.pnl_subClient.Visible = false;
-            // 
-            // pnl_DecSubClient
-            // 
-            this.pnl_DecSubClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(160)))));
-            this.pnl_DecSubClient.Location = new System.Drawing.Point(0, 0);
-            this.pnl_DecSubClient.Name = "pnl_DecSubClient";
-            this.pnl_DecSubClient.Size = new System.Drawing.Size(7, 100);
-            this.pnl_DecSubClient.TabIndex = 7;
-            // 
-            // btn_ConsultarClient
-            // 
-            this.btn_ConsultarClient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ConsultarClient.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.btn_ConsultarClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarClient.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarClient.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarClient.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConsultarClient.Image")));
-            this.btn_ConsultarClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ConsultarClient.Location = new System.Drawing.Point(0, 50);
-            this.btn_ConsultarClient.Name = "btn_ConsultarClient";
-            this.btn_ConsultarClient.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btn_ConsultarClient.Size = new System.Drawing.Size(200, 50);
-            this.btn_ConsultarClient.TabIndex = 6;
-            this.btn_ConsultarClient.Text = "     CONSULTAR";
-            this.btn_ConsultarClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ConsultarClient.UseVisualStyleBackColor = true;
-            this.btn_ConsultarClient.Click += new System.EventHandler(this.btn_ConsultarClient_Click);
-            // 
-            // btn_RegistrarClient
-            // 
-            this.btn_RegistrarClient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_RegistrarClient.FlatAppearance.BorderSize = 0;
-            this.btn_RegistrarClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.btn_RegistrarClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RegistrarClient.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RegistrarClient.ForeColor = System.Drawing.Color.White;
-            this.btn_RegistrarClient.Image = ((System.Drawing.Image)(resources.GetObject("btn_RegistrarClient.Image")));
-            this.btn_RegistrarClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RegistrarClient.Location = new System.Drawing.Point(0, 0);
-            this.btn_RegistrarClient.Name = "btn_RegistrarClient";
-            this.btn_RegistrarClient.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btn_RegistrarClient.Size = new System.Drawing.Size(200, 50);
-            this.btn_RegistrarClient.TabIndex = 5;
-            this.btn_RegistrarClient.Text = "     REGISTRAR";
-            this.btn_RegistrarClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_RegistrarClient.UseVisualStyleBackColor = true;
-            this.btn_RegistrarClient.Click += new System.EventHandler(this.btn_RegistrarClient_Click);
-            // 
             // btn_Clientes
             // 
+            this.btn_Clientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Clientes.FlatAppearance.BorderSize = 0;
             this.btn_Clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
             this.btn_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -638,18 +567,100 @@
             this.btn_Clientes.ForeColor = System.Drawing.Color.White;
             this.btn_Clientes.Image = ((System.Drawing.Image)(resources.GetObject("btn_Clientes.Image")));
             this.btn_Clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Clientes.Location = new System.Drawing.Point(0, 250);
+            this.btn_Clientes.Location = new System.Drawing.Point(0, 300);
             this.btn_Clientes.Name = "btn_Clientes";
             this.btn_Clientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_Clientes.Size = new System.Drawing.Size(200, 50);
-            this.btn_Clientes.TabIndex = 4;
+            this.btn_Clientes.TabIndex = 5;
             this.btn_Clientes.Text = "       CLIENTES";
             this.btn_Clientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Clientes.UseVisualStyleBackColor = true;
-            this.btn_Clientes.Click += new System.EventHandler(this.btn_Clientes_Click);
+            // 
+            // pnl_subVentas
+            // 
+            this.pnl_subVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
+            this.pnl_subVentas.Controls.Add(this.pnl_DecSubVentas);
+            this.pnl_subVentas.Controls.Add(this.btn_Copia_Factura);
+            this.pnl_subVentas.Controls.Add(this.btn_Total_Ventas);
+            this.pnl_subVentas.Location = new System.Drawing.Point(0, 300);
+            this.pnl_subVentas.Name = "pnl_subVentas";
+            this.pnl_subVentas.Size = new System.Drawing.Size(200, 0);
+            this.pnl_subVentas.TabIndex = 1;
+            this.pnl_subVentas.Visible = false;
+            // 
+            // pnl_DecSubVentas
+            // 
+            this.pnl_DecSubVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(160)))));
+            this.pnl_DecSubVentas.Location = new System.Drawing.Point(0, 0);
+            this.pnl_DecSubVentas.Name = "pnl_DecSubVentas";
+            this.pnl_DecSubVentas.Size = new System.Drawing.Size(7, 100);
+            this.pnl_DecSubVentas.TabIndex = 7;
+            // 
+            // btn_Copia_Factura
+            // 
+            this.btn_Copia_Factura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Copia_Factura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Copia_Factura.FlatAppearance.BorderSize = 0;
+            this.btn_Copia_Factura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.btn_Copia_Factura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Copia_Factura.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Copia_Factura.ForeColor = System.Drawing.Color.White;
+            this.btn_Copia_Factura.Image = ((System.Drawing.Image)(resources.GetObject("btn_Copia_Factura.Image")));
+            this.btn_Copia_Factura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Copia_Factura.Location = new System.Drawing.Point(0, 50);
+            this.btn_Copia_Factura.Name = "btn_Copia_Factura";
+            this.btn_Copia_Factura.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_Copia_Factura.Size = new System.Drawing.Size(200, 50);
+            this.btn_Copia_Factura.TabIndex = 6;
+            this.btn_Copia_Factura.Text = "     COPIA  FACTURA";
+            this.btn_Copia_Factura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Copia_Factura.UseVisualStyleBackColor = true;
+            this.btn_Copia_Factura.Click += new System.EventHandler(this.btn_ConsultarClient_Click);
+            // 
+            // btn_Total_Ventas
+            // 
+            this.btn_Total_Ventas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Total_Ventas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Total_Ventas.FlatAppearance.BorderSize = 0;
+            this.btn_Total_Ventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.btn_Total_Ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Total_Ventas.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Total_Ventas.ForeColor = System.Drawing.Color.White;
+            this.btn_Total_Ventas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Total_Ventas.Image")));
+            this.btn_Total_Ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Total_Ventas.Location = new System.Drawing.Point(0, 0);
+            this.btn_Total_Ventas.Name = "btn_Total_Ventas";
+            this.btn_Total_Ventas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_Total_Ventas.Size = new System.Drawing.Size(200, 50);
+            this.btn_Total_Ventas.TabIndex = 5;
+            this.btn_Total_Ventas.Text = "     TOTAL VENTAS";
+            this.btn_Total_Ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Total_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Total_Ventas.Click += new System.EventHandler(this.btn_RegistrarClient_Click);
+            // 
+            // btn_Ventas
+            // 
+            this.btn_Ventas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Ventas.FlatAppearance.BorderSize = 0;
+            this.btn_Ventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.btn_Ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ventas.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ventas.ForeColor = System.Drawing.Color.White;
+            this.btn_Ventas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ventas.Image")));
+            this.btn_Ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Ventas.Location = new System.Drawing.Point(0, 250);
+            this.btn_Ventas.Name = "btn_Ventas";
+            this.btn_Ventas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Ventas.Size = new System.Drawing.Size(200, 50);
+            this.btn_Ventas.TabIndex = 4;
+            this.btn_Ventas.Text = "       VENTAS";
+            this.btn_Ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Ventas.Click += new System.EventHandler(this.btn_Clientes_Click);
             // 
             // btn_ConteoCaja
             // 
+            this.btn_ConteoCaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ConteoCaja.FlatAppearance.BorderSize = 0;
             this.btn_ConteoCaja.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
             this.btn_ConteoCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -691,6 +702,7 @@
             // 
             // btn_Descuento
             // 
+            this.btn_Descuento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Descuento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Descuento.FlatAppearance.BorderSize = 0;
             this.btn_Descuento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
@@ -711,6 +723,7 @@
             // 
             // bnt_BodegaInv
             // 
+            this.bnt_BodegaInv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bnt_BodegaInv.Dock = System.Windows.Forms.DockStyle.Top;
             this.bnt_BodegaInv.FlatAppearance.BorderSize = 0;
             this.bnt_BodegaInv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
@@ -731,6 +744,7 @@
             // 
             // btn_ConsultaInv
             // 
+            this.btn_ConsultaInv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ConsultaInv.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_ConsultaInv.FlatAppearance.BorderSize = 0;
             this.btn_ConsultaInv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
@@ -751,6 +765,7 @@
             // 
             // btn_RegistroInv
             // 
+            this.btn_RegistroInv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RegistroInv.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_RegistroInv.FlatAppearance.BorderSize = 0;
             this.btn_RegistroInv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
@@ -787,6 +802,7 @@
             // 
             // btn_Inventario
             // 
+            this.btn_Inventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Inventario.FlatAppearance.BorderSize = 0;
             this.btn_Inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
             this.btn_Inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -882,7 +898,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.pnl_Menu.ResumeLayout(false);
             this.pnl_SubConfi.ResumeLayout(false);
-            this.pnl_subClient.ResumeLayout(false);
+            this.pnl_subVentas.ResumeLayout(false);
             this.pnl_SunInv.ResumeLayout(false);
             this.pnl_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -918,12 +934,12 @@
         private System.Windows.Forms.Panel pnl_Dec3;
         private System.Windows.Forms.Button btn_ConteoCaja;
         private System.Windows.Forms.Panel pnl_Dec4;
-        private System.Windows.Forms.Button btn_Clientes;
-        private System.Windows.Forms.Panel pnl_subClient;
-        private System.Windows.Forms.Button btn_RegistrarClient;
-        private System.Windows.Forms.Button btn_ConsultarClient;
+        private System.Windows.Forms.Button btn_Ventas;
+        private System.Windows.Forms.Panel pnl_subVentas;
+        private System.Windows.Forms.Button btn_Total_Ventas;
+        private System.Windows.Forms.Button btn_Copia_Factura;
         private System.Windows.Forms.Panel pnl_Dec5;
-        private System.Windows.Forms.Button btn_TotalVentas;
+        private System.Windows.Forms.Button btn_Clientes;
         private System.Windows.Forms.Panel pnl_Dec6;
         private System.Windows.Forms.Button btn_Creditos;
         private System.Windows.Forms.Panel pnl_Dec7;
@@ -943,7 +959,7 @@
         private System.Windows.Forms.Label lbl_tipoUser;
         private System.Windows.Forms.Panel pnl_DecSubInv;
         private System.Windows.Forms.Panel pnl_DecSubConfi;
-        private System.Windows.Forms.Panel pnl_DecSubClient;
+        private System.Windows.Forms.Panel pnl_DecSubVentas;
         private System.Windows.Forms.Panel panel_Lateral;
     }
 }

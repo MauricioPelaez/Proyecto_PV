@@ -503,9 +503,9 @@
             this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_Titulo.Location = new System.Drawing.Point(59, 16);
+            this.lbl_Titulo.Location = new System.Drawing.Point(-2, 16);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(879, 34);
+            this.lbl_Titulo.Size = new System.Drawing.Size(996, 34);
             this.lbl_Titulo.TabIndex = 33;
             this.lbl_Titulo.Text = "PROVEEDORES";
             this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

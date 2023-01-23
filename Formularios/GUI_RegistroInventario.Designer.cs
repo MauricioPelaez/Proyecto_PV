@@ -137,9 +137,9 @@
             this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.lbl_Titulo.Location = new System.Drawing.Point(58, 13);
+            this.lbl_Titulo.Location = new System.Drawing.Point(-2, 13);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(880, 39);
+            this.lbl_Titulo.Size = new System.Drawing.Size(996, 39);
             this.lbl_Titulo.TabIndex = 32;
             this.lbl_Titulo.Text = "REGISTRO DE PRODUCTOS";
             this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
