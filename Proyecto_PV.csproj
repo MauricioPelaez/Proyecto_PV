@@ -185,7 +185,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Proyecto_PV.Datos_Staticos.TablaBodegas.datasource" />
     <None Include="Properties\Settings.settings">
