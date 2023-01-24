@@ -244,5 +244,6 @@ namespace Proyecto_PV.Views
             this.Close();
         }
         #endregion
+
     }
 }
