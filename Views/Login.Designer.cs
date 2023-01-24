@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnl_Cabecera = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Minimizar = new Proyecto_PV.Resources.Botones();
+            this.btn_Cerrar = new Proyecto_PV.Resources.Botones();
+            this.btn_Maximizar = new Proyecto_PV.Resources.Botones();
+            this.btn_Restaurar = new Proyecto_PV.Resources.Botones();
             this.pnl_Pie = new System.Windows.Forms.Panel();
             this.lbl_Autor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@
             this.lbl_Validacion = new System.Windows.Forms.Label();
             this.lbl_UserIng = new System.Windows.Forms.Label();
             this.lbl_TipoUserIng = new System.Windows.Forms.Label();
-            this.btn_Minimizar = new Proyecto_PV.Resources.Botones();
-            this.btn_Cerrar = new Proyecto_PV.Resources.Botones();
-            this.btn_Maximizar = new Proyecto_PV.Resources.Botones();
-            this.btn_Restaurar = new Proyecto_PV.Resources.Botones();
             this.btn_Salir = new Proyecto_PV.Resources.Botones();
             this.btn_Iniciar = new Proyecto_PV.Resources.Botones();
             this.pnl_Cabecera.SuspendLayout();
@@ -80,6 +80,99 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // btn_Minimizar
+            // 
+            this.btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Minimizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Minimizar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Minimizar.BorderRadius = 6;
+            this.btn_Minimizar.BorderSize = 0;
+            this.btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Minimizar.FlatAppearance.BorderSize = 0;
+            this.btn_Minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btn_Minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
+            this.btn_Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Minimizar.ForeColor = System.Drawing.Color.White;
+            this.btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minimizar.Image")));
+            this.btn_Minimizar.Location = new System.Drawing.Point(205, 12);
+            this.btn_Minimizar.Name = "btn_Minimizar";
+            this.btn_Minimizar.Size = new System.Drawing.Size(35, 28);
+            this.btn_Minimizar.TabIndex = 16;
+            this.btn_Minimizar.TextColor = System.Drawing.Color.White;
+            this.btn_Minimizar.UseVisualStyleBackColor = false;
+            this.btn_Minimizar.Click += new System.EventHandler(this.btn_Minimizar_Click);
+            // 
+            // btn_Cerrar
+            // 
+            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Cerrar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Cerrar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Cerrar.BorderRadius = 6;
+            this.btn_Cerrar.BorderSize = 0;
+            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btn_Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cerrar.ForeColor = System.Drawing.Color.White;
+            this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
+            this.btn_Cerrar.Location = new System.Drawing.Point(287, 12);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(35, 28);
+            this.btn_Cerrar.TabIndex = 13;
+            this.btn_Cerrar.TextColor = System.Drawing.Color.White;
+            this.btn_Cerrar.UseVisualStyleBackColor = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            // 
+            // btn_Maximizar
+            // 
+            this.btn_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Maximizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Maximizar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Maximizar.BorderRadius = 6;
+            this.btn_Maximizar.BorderSize = 0;
+            this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Maximizar.FlatAppearance.BorderSize = 0;
+            this.btn_Maximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btn_Maximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
+            this.btn_Maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Maximizar.ForeColor = System.Drawing.Color.White;
+            this.btn_Maximizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maximizar.Image")));
+            this.btn_Maximizar.Location = new System.Drawing.Point(246, 12);
+            this.btn_Maximizar.Name = "btn_Maximizar";
+            this.btn_Maximizar.Size = new System.Drawing.Size(35, 28);
+            this.btn_Maximizar.TabIndex = 14;
+            this.btn_Maximizar.TextColor = System.Drawing.Color.White;
+            this.btn_Maximizar.UseVisualStyleBackColor = false;
+            this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
+            // 
+            // btn_Restaurar
+            // 
+            this.btn_Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Restaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Restaurar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.btn_Restaurar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Restaurar.BorderRadius = 6;
+            this.btn_Restaurar.BorderSize = 0;
+            this.btn_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Restaurar.FlatAppearance.BorderSize = 0;
+            this.btn_Restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btn_Restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
+            this.btn_Restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Restaurar.ForeColor = System.Drawing.Color.White;
+            this.btn_Restaurar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Restaurar.Image")));
+            this.btn_Restaurar.Location = new System.Drawing.Point(246, 12);
+            this.btn_Restaurar.Name = "btn_Restaurar";
+            this.btn_Restaurar.Size = new System.Drawing.Size(35, 28);
+            this.btn_Restaurar.TabIndex = 15;
+            this.btn_Restaurar.TextColor = System.Drawing.Color.White;
+            this.btn_Restaurar.UseVisualStyleBackColor = false;
+            this.btn_Restaurar.Visible = false;
+            this.btn_Restaurar.Click += new System.EventHandler(this.btn_Restaurar_Click);
             // 
             // pnl_Pie
             // 
@@ -236,99 +329,6 @@
             this.lbl_TipoUserIng.Text = "Tipo Usuario";
             this.lbl_TipoUserIng.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_TipoUserIng.Visible = false;
-            // 
-            // btn_Minimizar
-            // 
-            this.btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Minimizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Minimizar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Minimizar.BorderRadius = 6;
-            this.btn_Minimizar.BorderSize = 0;
-            this.btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Minimizar.FlatAppearance.BorderSize = 0;
-            this.btn_Minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btn_Minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
-            this.btn_Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Minimizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minimizar.Image")));
-            this.btn_Minimizar.Location = new System.Drawing.Point(205, 12);
-            this.btn_Minimizar.Name = "btn_Minimizar";
-            this.btn_Minimizar.Size = new System.Drawing.Size(35, 28);
-            this.btn_Minimizar.TabIndex = 16;
-            this.btn_Minimizar.TextColor = System.Drawing.Color.White;
-            this.btn_Minimizar.UseVisualStyleBackColor = false;
-            this.btn_Minimizar.Click += new System.EventHandler(this.btn_Minimizar_Click);
-            // 
-            // btn_Cerrar
-            // 
-            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Cerrar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Cerrar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Cerrar.BorderRadius = 6;
-            this.btn_Cerrar.BorderSize = 0;
-            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cerrar.FlatAppearance.BorderSize = 0;
-            this.btn_Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btn_Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cerrar.ForeColor = System.Drawing.Color.White;
-            this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
-            this.btn_Cerrar.Location = new System.Drawing.Point(287, 12);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(35, 28);
-            this.btn_Cerrar.TabIndex = 13;
-            this.btn_Cerrar.TextColor = System.Drawing.Color.White;
-            this.btn_Cerrar.UseVisualStyleBackColor = false;
-            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
-            // 
-            // btn_Maximizar
-            // 
-            this.btn_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Maximizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Maximizar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Maximizar.BorderRadius = 6;
-            this.btn_Maximizar.BorderSize = 0;
-            this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Maximizar.FlatAppearance.BorderSize = 0;
-            this.btn_Maximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btn_Maximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
-            this.btn_Maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Maximizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Maximizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maximizar.Image")));
-            this.btn_Maximizar.Location = new System.Drawing.Point(246, 12);
-            this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(35, 28);
-            this.btn_Maximizar.TabIndex = 14;
-            this.btn_Maximizar.TextColor = System.Drawing.Color.White;
-            this.btn_Maximizar.UseVisualStyleBackColor = false;
-            this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
-            // 
-            // btn_Restaurar
-            // 
-            this.btn_Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Restaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Restaurar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.btn_Restaurar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Restaurar.BorderRadius = 6;
-            this.btn_Restaurar.BorderSize = 0;
-            this.btn_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Restaurar.FlatAppearance.BorderSize = 0;
-            this.btn_Restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btn_Restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
-            this.btn_Restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Restaurar.ForeColor = System.Drawing.Color.White;
-            this.btn_Restaurar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Restaurar.Image")));
-            this.btn_Restaurar.Location = new System.Drawing.Point(246, 12);
-            this.btn_Restaurar.Name = "btn_Restaurar";
-            this.btn_Restaurar.Size = new System.Drawing.Size(35, 28);
-            this.btn_Restaurar.TabIndex = 15;
-            this.btn_Restaurar.TextColor = System.Drawing.Color.White;
-            this.btn_Restaurar.UseVisualStyleBackColor = false;
-            this.btn_Restaurar.Visible = false;
-            this.btn_Restaurar.Click += new System.EventHandler(this.btn_Restaurar_Click);
             // 
             // btn_Salir
             // 
