@@ -69,6 +69,15 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -140,6 +149,12 @@
     <Compile Include="Custom_Constrols\Botones.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\Camara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Camara.Designer.cs">
+      <DependentUpon>Camara.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\GUI_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\GUI_Inventario.resx">
       <DependentUpon>GUI_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Camara.resx">
+      <DependentUpon>Camara.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\GUI_Principal.resx">
       <DependentUpon>GUI_Principal.cs</DependentUpon>

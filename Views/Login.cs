@@ -14,6 +14,7 @@ namespace Proyecto_PV.Views
         {
             InitializeComponent();
             txtUser.Focus();
+            conexion.ConnectionString = conexionSQL.Conectar();
         }
 
         #region ver Contraseña
@@ -131,7 +132,6 @@ namespace Proyecto_PV.Views
         {
             try
             {
-                conexion.ConnectionString = conexionSQL.Conectar();
                 if(conexion.State == ConnectionState.Closed) 
                 {
                     conexion.Open();
@@ -204,7 +204,6 @@ namespace Proyecto_PV.Views
         #region Ver nombre y tipo del usuario ingresado
         private void txtUser_TextChanged_1(object sender, EventArgs e)
         {
-            conexion.ConnectionString = conexionSQL.Conectar();
             if (conexion.State == ConnectionState.Closed)
             {
                 conexion.Open();
@@ -245,5 +244,10 @@ namespace Proyecto_PV.Views
         }
         #endregion
 
+        private void btn_Cam_Click(object sender, EventArgs e)
+        {
+            Camara cam = new Camara();
+            cam.Show();
+        }
     }
 }

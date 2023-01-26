@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnl_Cabecera = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.img_PV = new System.Windows.Forms.PictureBox();
             this.btn_Minimizar = new Proyecto_PV.Resources.Botones();
             this.btn_Cerrar = new Proyecto_PV.Resources.Botones();
             this.btn_Maximizar = new Proyecto_PV.Resources.Botones();
@@ -49,8 +49,9 @@
             this.lbl_TipoUserIng = new System.Windows.Forms.Label();
             this.btn_Salir = new Proyecto_PV.Resources.Botones();
             this.btn_Iniciar = new Proyecto_PV.Resources.Botones();
+            this.btn_Cam = new Proyecto_PV.Resources.Botones();
             this.pnl_Cabecera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_PV)).BeginInit();
             this.pnl_Pie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,7 +60,7 @@
             // pnl_Cabecera
             // 
             this.pnl_Cabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.pnl_Cabecera.Controls.Add(this.pictureBox1);
+            this.pnl_Cabecera.Controls.Add(this.img_PV);
             this.pnl_Cabecera.Controls.Add(this.btn_Minimizar);
             this.pnl_Cabecera.Controls.Add(this.btn_Cerrar);
             this.pnl_Cabecera.Controls.Add(this.btn_Maximizar);
@@ -71,15 +72,15 @@
             this.pnl_Cabecera.TabIndex = 4;
             this.pnl_Cabecera.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Cabecera_MouseMove);
             // 
-            // pictureBox1
+            // img_PV
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.img_PV.Image = ((System.Drawing.Image)(resources.GetObject("img_PV.Image")));
+            this.img_PV.Location = new System.Drawing.Point(12, 12);
+            this.img_PV.Name = "img_PV";
+            this.img_PV.Size = new System.Drawing.Size(33, 32);
+            this.img_PV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_PV.TabIndex = 13;
+            this.img_PV.TabStop = false;
             // 
             // btn_Minimizar
             // 
@@ -378,6 +379,24 @@
             this.btn_Iniciar.Click += new System.EventHandler(this.btn_Iniciar_Click);
             this.btn_Iniciar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_Iniciar_KeyPress);
             // 
+            // btn_Cam
+            // 
+            this.btn_Cam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
+            this.btn_Cam.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
+            this.btn_Cam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(10)))), ((int)(((byte)(250)))));
+            this.btn_Cam.BorderRadius = 20;
+            this.btn_Cam.BorderSize = 0;
+            this.btn_Cam.FlatAppearance.BorderSize = 0;
+            this.btn_Cam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cam.ForeColor = System.Drawing.Color.White;
+            this.btn_Cam.Location = new System.Drawing.Point(53, 91);
+            this.btn_Cam.Name = "btn_Cam";
+            this.btn_Cam.Size = new System.Drawing.Size(43, 39);
+            this.btn_Cam.TabIndex = 15;
+            this.btn_Cam.TextColor = System.Drawing.Color.White;
+            this.btn_Cam.UseVisualStyleBackColor = false;
+            this.btn_Cam.Click += new System.EventHandler(this.btn_Cam_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,6 +404,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(334, 650);
+            this.Controls.Add(this.btn_Cam);
             this.Controls.Add(this.lbl_TipoUserIng);
             this.Controls.Add(this.lbl_UserIng);
             this.Controls.Add(this.pnl_Pie);
@@ -404,7 +424,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.pnl_Cabecera.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_PV)).EndInit();
             this.pnl_Pie.ResumeLayout(false);
             this.pnl_Pie.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).EndInit();
@@ -424,7 +444,7 @@
         private Resources.Botones btn_Maximizar;
         private Resources.Botones btn_Restaurar;
         private Resources.Botones btn_Minimizar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox img_PV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUser;
@@ -437,5 +457,6 @@
         private System.Windows.Forms.Label lbl_Validacion;
         private System.Windows.Forms.Label lbl_UserIng;
         private System.Windows.Forms.Label lbl_TipoUserIng;
+        private Resources.Botones btn_Cam;
     }
 }

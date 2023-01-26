@@ -871,7 +871,7 @@
             this.MinimumSize = new System.Drawing.Size(898, 680);
             this.Name = "GUI_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GUI_Principal";
+            this.Text = "g";
             this.Load += new System.EventHandler(this.GUI_Principal_Load);
             this.pnl_Principal.ResumeLayout(false);
             this.pnl_Formularios.ResumeLayout(false);
