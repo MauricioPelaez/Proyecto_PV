@@ -193,7 +193,7 @@
             this.lbl_Fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Fecha.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_Fecha.Location = new System.Drawing.Point(708, 9);
+            this.lbl_Fecha.Location = new System.Drawing.Point(734, 9);
             this.lbl_Fecha.Name = "lbl_Fecha";
             this.lbl_Fecha.Size = new System.Drawing.Size(37, 13);
             this.lbl_Fecha.TabIndex = 1;
@@ -870,6 +870,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(898, 680);
             this.Name = "GUI_Principal";
+            this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "g";
             this.Load += new System.EventHandler(this.GUI_Principal_Load);

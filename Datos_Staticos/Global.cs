@@ -14,5 +14,6 @@ namespace Proyecto_PV.Datos_Staticos
         internal static string id_bodega{ get; set; }
         internal static string id_proveedor { get; set; }
         internal static string id_producto { get; set; }
+        internal static int camara { get; set; }
     }
 }

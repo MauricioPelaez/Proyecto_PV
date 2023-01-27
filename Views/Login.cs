@@ -160,8 +160,10 @@ namespace Proyecto_PV.Views
                 else
                 {
 
-                    GUI_Principal ventana = new GUI_Principal();
-                    ventana.Show();
+                    //GUI_Principal ventana = new GUI_Principal();
+                    //ventana.Show();
+                    Camara cam = new Camara();
+                    cam.Show();
                     this.Close();
 
                     if (conexion.State == ConnectionState.Open)
@@ -188,6 +190,7 @@ namespace Proyecto_PV.Views
         private void btn_Iniciar_Click(object sender, EventArgs e)
         {
             IniciarSesion();
+
         }
 
         private void btn_Iniciar_KeyPress(object sender, KeyPressEventArgs e)
@@ -246,8 +249,9 @@ namespace Proyecto_PV.Views
 
         private void btn_Cam_Click(object sender, EventArgs e)
         {
-            Camara cam = new Camara();
+            Conf_Video cam = new Conf_Video();
             cam.Show();
+            this.Close();
         }
     }
 }
