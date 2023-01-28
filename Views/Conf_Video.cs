@@ -28,19 +28,19 @@ namespace Proyecto_PV.Views
             try
             {
                 CaptureDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-
                 foreach (FilterInfo Device in CaptureDevices)
                 {
                     int i = 1;
+
                     combo_Conect.Items.Add(Device.Name);
                     i++;
                 }
-                combo_Conect.SelectedIndex = 1;
             }
             catch
             {
                 CaptureDevices = null;
             }
+
         }
 
         private void btn_Select_Cam_Click(object sender, EventArgs e)

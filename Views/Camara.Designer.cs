@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Camara));
-            this.combo_Conect = new System.Windows.Forms.ComboBox();
+            this.combo_Conection = new System.Windows.Forms.ComboBox();
             this.lbl_Confirm = new System.Windows.Forms.Label();
             this.pnl_Pie = new System.Windows.Forms.Panel();
+            this.lbl_Num = new System.Windows.Forms.Label();
             this.Img_1 = new AForge.Controls.PictureBox();
             this.Img_2 = new AForge.Controls.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,27 +41,28 @@
             this.btn_Cerrar = new Proyecto_PV.Resources.Botones();
             this.tmr_Seg = new System.Windows.Forms.Timer(this.components);
             this.lbl_Time = new System.Windows.Forms.Label();
-            this.btn_Save = new Proyecto_PV.Resources.Botones();
-            this.btn_Capture = new Proyecto_PV.Resources.Botones();
             this.lbl_Nombre_User = new System.Windows.Forms.Label();
             this.lbl_Tipo_user = new System.Windows.Forms.Label();
+            this.btn_Save = new Proyecto_PV.Resources.Botones();
+            this.btn_Capture = new Proyecto_PV.Resources.Botones();
+            this.pnl_Pie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Img_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_2)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // combo_Conect
+            // combo_Conection
             // 
-            this.combo_Conect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
-            this.combo_Conect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.combo_Conect.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_Conect.ForeColor = System.Drawing.Color.White;
-            this.combo_Conect.FormattingEnabled = true;
-            this.combo_Conect.Location = new System.Drawing.Point(26, 77);
-            this.combo_Conect.Name = "combo_Conect";
-            this.combo_Conect.Size = new System.Drawing.Size(244, 23);
-            this.combo_Conect.TabIndex = 2;
-            this.combo_Conect.Visible = false;
+            this.combo_Conection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
+            this.combo_Conection.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.combo_Conection.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_Conection.ForeColor = System.Drawing.Color.White;
+            this.combo_Conection.FormattingEnabled = true;
+            this.combo_Conection.Location = new System.Drawing.Point(26, 77);
+            this.combo_Conection.Name = "combo_Conection";
+            this.combo_Conection.Size = new System.Drawing.Size(244, 23);
+            this.combo_Conection.TabIndex = 2;
+            this.combo_Conection.Visible = false;
             // 
             // lbl_Confirm
             // 
@@ -75,11 +77,25 @@
             // pnl_Pie
             // 
             this.pnl_Pie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.pnl_Pie.Controls.Add(this.lbl_Num);
             this.pnl_Pie.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Pie.Location = new System.Drawing.Point(0, 400);
             this.pnl_Pie.Name = "pnl_Pie";
             this.pnl_Pie.Size = new System.Drawing.Size(680, 50);
             this.pnl_Pie.TabIndex = 10;
+            // 
+            // lbl_Num
+            // 
+            this.lbl_Num.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Num.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_Num.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Num.ForeColor = System.Drawing.Color.White;
+            this.lbl_Num.Location = new System.Drawing.Point(611, 0);
+            this.lbl_Num.Name = "lbl_Num";
+            this.lbl_Num.Size = new System.Drawing.Size(69, 50);
+            this.lbl_Num.TabIndex = 19;
+            this.lbl_Num.Text = "0";
+            this.lbl_Num.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Img_1
             // 
@@ -167,6 +183,26 @@
             this.lbl_Time.Text = "7";
             this.lbl_Time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_Nombre_User
+            // 
+            this.lbl_Nombre_User.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nombre_User.ForeColor = System.Drawing.Color.LightGray;
+            this.lbl_Nombre_User.Location = new System.Drawing.Point(469, 156);
+            this.lbl_Nombre_User.Name = "lbl_Nombre_User";
+            this.lbl_Nombre_User.Size = new System.Drawing.Size(180, 17);
+            this.lbl_Nombre_User.TabIndex = 17;
+            this.lbl_Nombre_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Tipo_user
+            // 
+            this.lbl_Tipo_user.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tipo_user.ForeColor = System.Drawing.Color.LightGray;
+            this.lbl_Tipo_user.Location = new System.Drawing.Point(469, 181);
+            this.lbl_Tipo_user.Name = "lbl_Tipo_user";
+            this.lbl_Tipo_user.Size = new System.Drawing.Size(180, 17);
+            this.lbl_Tipo_user.TabIndex = 18;
+            this.lbl_Tipo_user.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btn_Save
             // 
             this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
@@ -187,7 +223,6 @@
             this.btn_Save.TextColor = System.Drawing.Color.White;
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Visible = false;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Capture
             // 
@@ -210,26 +245,6 @@
             this.btn_Capture.UseVisualStyleBackColor = false;
             this.btn_Capture.Visible = false;
             // 
-            // lbl_Nombre_User
-            // 
-            this.lbl_Nombre_User.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre_User.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_Nombre_User.Location = new System.Drawing.Point(469, 156);
-            this.lbl_Nombre_User.Name = "lbl_Nombre_User";
-            this.lbl_Nombre_User.Size = new System.Drawing.Size(180, 17);
-            this.lbl_Nombre_User.TabIndex = 17;
-            this.lbl_Nombre_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_Tipo_user
-            // 
-            this.lbl_Tipo_user.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Tipo_user.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_Tipo_user.Location = new System.Drawing.Point(469, 181);
-            this.lbl_Tipo_user.Name = "lbl_Tipo_user";
-            this.lbl_Tipo_user.Size = new System.Drawing.Size(180, 17);
-            this.lbl_Tipo_user.TabIndex = 18;
-            this.lbl_Tipo_user.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Camara
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,7 +255,7 @@
             this.Controls.Add(this.lbl_Nombre_User);
             this.Controls.Add(this.lbl_Time);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.combo_Conect);
+            this.Controls.Add(this.combo_Conection);
             this.Controls.Add(this.Img_2);
             this.Controls.Add(this.Img_1);
             this.Controls.Add(this.pnl_Pie);
@@ -253,6 +268,7 @@
             this.Text = "Camara";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Camara_FormClosing);
             this.Load += new System.EventHandler(this.Camara_Load);
+            this.pnl_Pie.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Img_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_2)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -261,7 +277,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox combo_Conect;
+        private System.Windows.Forms.ComboBox combo_Conection;
         private Resources.Botones btn_Cerrar;
         private Resources.Botones btn_Capture;
         private Resources.Botones btn_Save;
@@ -275,5 +291,6 @@
         private System.Windows.Forms.Label lbl_Time;
         private System.Windows.Forms.Label lbl_Nombre_User;
         private System.Windows.Forms.Label lbl_Tipo_user;
+        private System.Windows.Forms.Label lbl_Num;
     }
 }
