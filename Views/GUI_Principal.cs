@@ -2,6 +2,7 @@
 using Proyecto_PV.Formularios;
 using System;
 using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Forms;
@@ -69,7 +70,22 @@ namespace Proyecto_PV.Views
         #region Botones Cabecera
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
-            if(Global.pestaña == true)
+            string mensajeText = "¿Desea cerrar la sesión?";
+            string caption = "Cerrar sesión";
+
+            MessageBoxButton button = MessageBoxButton.YesNo;
+            MessageBoxImage icon = MessageBoxImage.Question;
+            MessageBoxResult result;
+
+            result = System.Windows.MessageBox.Show(mensajeText, caption, button, icon);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Environment.Exit(1);
+            }
+
+            /*
+            if (Global.pestaña == true)
             {
                 string mensaje = "Aun tiene un formulario abierto";
                 string titulo = "Advertencia";
@@ -96,9 +112,9 @@ namespace Proyecto_PV.Views
                     this.Close();
                 }
             }
-
+            */
         }
-       
+
         private void btn_Maximizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
@@ -140,7 +156,7 @@ namespace Proyecto_PV.Views
             else
             {
                 ExpandirMenu();
-            }  
+            }
         }
 
         #endregion
@@ -264,7 +280,7 @@ namespace Proyecto_PV.Views
             Ocultar_SubInv();
             Ocultar_SubConfi();
 
-            if(pnl_subClient.Height == 100)
+            if (pnl_subClient.Height == 100)
             {
                 Ocultar_SubClient();
             }
@@ -335,14 +351,41 @@ namespace Proyecto_PV.Views
         #region Fecha y hora
         private void tmr_Reloj_Tick(object sender, EventArgs e)
         {
-            lbl_Fecha.Text = DateTime.Now.ToLongDateString();
-            lbl_Hora.Text = DateTime.Now.ToString("hh:mm:ss tt");    
+            lbl_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lbl_Hora.Text = DateTime.Now.ToString("hh:mm tt");
         }
 
         #endregion
 
         #region Abrir formularios
 
+        private void AbrirFormulario<T>() where T : Form, new()
+        {
+            Form formulario = pnl_Formularios.Controls.OfType<T>().FirstOrDefault();
+            if (formulario != null)
+            {
+                //Si la instancia esta minimizada la dejamos en su estado normal
+                if (formulario.WindowState == FormWindowState.Minimized)
+                {
+                    formulario.WindowState = FormWindowState.Normal;
+                }
+                //Si la instancia existe la pongo en primer plano
+                formulario.BringToFront();
+                return;
+            }
+
+            //Se abre el form
+            formulario = new T();
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            pnl_Formularios.Controls.Add(formulario);
+            pnl_Formularios.Tag = formulario;
+            formulario.BringToFront();
+            formulario.Show();
+
+        }
+        /*
         private Form ventana = null;
         private void AbrirFormulario(Form formulario)
         {
@@ -362,10 +405,11 @@ namespace Proyecto_PV.Views
                 pnl_Formularios.Tag = formulario;
                 formulario.BringToFront();
                 formulario.Show();
+
             }
-
+           
         }
-
+        */
         public void RetraerTodo()
         {
             Ocultar_SubInv();
@@ -377,26 +421,28 @@ namespace Proyecto_PV.Views
         //Proveedores
         private void btn_Proveedores_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new GUI_Proveedores());
+            AbrirFormulario<GUI_Proveedores>();
             RetraerTodo();
         }
 
         //Registro de inventario
         private void btn_RegistroInv_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new GUI_RegistroInventario());
+            //AbrirFormulario(new GUI_RegistroInventario());
+            AbrirFormulario<GUI_RegistroInventario>();
             RetraerTodo();
         }
 
         private void btn_ConsultaInv_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new GUI_Inventario());
+            // AbrirFormulario(new GUI_Inventario());
             RetraerTodo();
         }
 
         private void bnt_BodegaInv_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new GUI_Bodegas());
+            // AbrirFormulario(new GUI_Bodegas());
+
             RetraerTodo();
         }
 
@@ -404,12 +450,11 @@ namespace Proyecto_PV.Views
         {
 
         }
-
         #endregion
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            
-        }
+
+        #region Barra tareas
+
+        #endregion
     }
 }

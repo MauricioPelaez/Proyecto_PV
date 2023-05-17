@@ -32,6 +32,7 @@ namespace Proyecto_PV.Formularios
             NRegistros();
             Limpiar();
             DGV_Productos.ClearSelection();
+            Global.pest_reg_inv = true;
         }
         #endregion
 
@@ -135,6 +136,22 @@ namespace Proyecto_PV.Formularios
                 txt_Descripción.Focus();
                 e.Handled = true;
             }
+
+            // -> Validar solo Números
+            else if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void txt_Descripción_KeyPress(object sender, KeyPressEventArgs e)
@@ -173,6 +190,20 @@ namespace Proyecto_PV.Formularios
                 txt_ValCompra.Focus();
                 e.Handled = true;
             }
+
+            // -> Validar solo Números
+            else if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void txt_ValCompra_KeyPress(object sender, KeyPressEventArgs e)
@@ -180,6 +211,20 @@ namespace Proyecto_PV.Formularios
             if (e.KeyChar == 13)
             {
                 txt_ValVenta.Focus();
+                e.Handled = true;
+            }
+
+            // -> Validar solo Números
+            else if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
                 e.Handled = true;
             }
         }
@@ -190,6 +235,19 @@ namespace Proyecto_PV.Formularios
             {
                 combo_Descuento.Focus();
                 combo_Descuento.SelectedIndex = 1;
+                e.Handled = true;
+            }
+            // -> Validar solo Números
+            else if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else 
+            {
                 e.Handled = true;
             }
         }
@@ -472,18 +530,24 @@ namespace Proyecto_PV.Formularios
             }
             catch
             {
+                /*
                 string mensajeText = "El valor de compra o de venta es incorrecto";
                 string caption = "Error en los Precios";
-
+                
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBoxResult result;
 
                 result = System.Windows.MessageBox.Show(mensajeText, caption, button, icon);
-                txt_ValCompra.Focus();
+                */
+
+                txt_Ganancia.Text = "0";
             }
         }
-
+        private void txt_ValCompra_TextChanged(object sender, EventArgs e)
+        {
+            Ganancia();
+        }
         private void txt_ValVenta_TextChanged(object sender, EventArgs e)
         {
             Ganancia();
@@ -771,7 +835,7 @@ namespace Proyecto_PV.Formularios
         #region Cerrar Formulario
         private void btn_Volver_Click(object sender, EventArgs e)
         {
-            Global.pestaña = false;
+            Global.pest_reg_inv = false;
             this.Close();
         }
         #endregion
@@ -786,5 +850,6 @@ namespace Proyecto_PV.Formularios
         }
         #endregion
 
+        
     }
 }

@@ -527,6 +527,7 @@
             this.txt_ValCompra.Size = new System.Drawing.Size(220, 23);
             this.txt_ValCompra.TabIndex = 64;
             this.txt_ValCompra.Text = "0";
+            this.txt_ValCompra.TextChanged += new System.EventHandler(this.txt_ValCompra_TextChanged);
             this.txt_ValCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ValCompra_KeyPress);
             // 
             // lbl_VCompra

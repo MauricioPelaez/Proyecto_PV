@@ -36,6 +36,20 @@
             this.lbl_User = new System.Windows.Forms.Label();
             this.img_Logo = new System.Windows.Forms.PictureBox();
             this.pnl_Pie = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.ic_prov = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ic_reg_invent = new System.Windows.Forms.Button();
+            this.pnl_led_pv = new System.Windows.Forms.Panel();
+            this.btn_inf_pv = new System.Windows.Forms.Button();
             this.lbl_Hora = new System.Windows.Forms.Label();
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.panel_Lateral = new System.Windows.Forms.Panel();
@@ -108,7 +122,7 @@
             this.pnl_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Principal.Location = new System.Drawing.Point(0, 0);
             this.pnl_Principal.Name = "pnl_Principal";
-            this.pnl_Principal.Size = new System.Drawing.Size(1220, 680);
+            this.pnl_Principal.Size = new System.Drawing.Size(1220, 700);
             this.pnl_Principal.TabIndex = 0;
             // 
             // pnl_Formularios
@@ -118,9 +132,9 @@
             this.pnl_Formularios.Controls.Add(this.lbl_User);
             this.pnl_Formularios.Controls.Add(this.img_Logo);
             this.pnl_Formularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Formularios.Location = new System.Drawing.Point(200, 50);
+            this.pnl_Formularios.Location = new System.Drawing.Point(200, 53);
             this.pnl_Formularios.Name = "pnl_Formularios";
-            this.pnl_Formularios.Size = new System.Drawing.Size(1000, 600);
+            this.pnl_Formularios.Size = new System.Drawing.Size(1000, 597);
             this.pnl_Formularios.TabIndex = 3;
             this.pnl_Formularios.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Formularios_MouseMove);
             // 
@@ -154,7 +168,7 @@
             // 
             this.img_Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.img_Logo.Image = ((System.Drawing.Image)(resources.GetObject("img_Logo.Image")));
-            this.img_Logo.Location = new System.Drawing.Point(180, 172);
+            this.img_Logo.Location = new System.Drawing.Point(180, 170);
             this.img_Logo.Name = "img_Logo";
             this.img_Logo.Size = new System.Drawing.Size(640, 256);
             this.img_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,48 +178,308 @@
             // pnl_Pie
             // 
             this.pnl_Pie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.pnl_Pie.Controls.Add(this.button11);
+            this.pnl_Pie.Controls.Add(this.ic_prov);
+            this.pnl_Pie.Controls.Add(this.button9);
+            this.pnl_Pie.Controls.Add(this.button8);
+            this.pnl_Pie.Controls.Add(this.button7);
+            this.pnl_Pie.Controls.Add(this.button6);
+            this.pnl_Pie.Controls.Add(this.button5);
+            this.pnl_Pie.Controls.Add(this.button4);
+            this.pnl_Pie.Controls.Add(this.button3);
+            this.pnl_Pie.Controls.Add(this.button2);
+            this.pnl_Pie.Controls.Add(this.panel1);
+            this.pnl_Pie.Controls.Add(this.ic_reg_invent);
+            this.pnl_Pie.Controls.Add(this.pnl_led_pv);
+            this.pnl_Pie.Controls.Add(this.btn_inf_pv);
             this.pnl_Pie.Controls.Add(this.lbl_Hora);
             this.pnl_Pie.Controls.Add(this.lbl_Fecha);
             this.pnl_Pie.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Pie.Location = new System.Drawing.Point(200, 650);
             this.pnl_Pie.Name = "pnl_Pie";
-            this.pnl_Pie.Size = new System.Drawing.Size(1000, 30);
+            this.pnl_Pie.Size = new System.Drawing.Size(1000, 50);
             this.pnl_Pie.TabIndex = 2;
             this.pnl_Pie.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Pie_MouseMove);
+            // 
+            // button11
+            // 
+            this.button11.AllowDrop = true;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.Location = new System.Drawing.Point(484, 0);
+            this.button11.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(44, 50);
+            this.button11.TabIndex = 22;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Visible = false;
+            // 
+            // ic_prov
+            // 
+            this.ic_prov.AllowDrop = true;
+            this.ic_prov.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ic_prov.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ic_prov.FlatAppearance.BorderSize = 0;
+            this.ic_prov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.ic_prov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ic_prov.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ic_prov.ForeColor = System.Drawing.Color.White;
+            this.ic_prov.Image = ((System.Drawing.Image)(resources.GetObject("ic_prov.Image")));
+            this.ic_prov.Location = new System.Drawing.Point(440, 0);
+            this.ic_prov.MinimumSize = new System.Drawing.Size(30, 50);
+            this.ic_prov.Name = "ic_prov";
+            this.ic_prov.Size = new System.Drawing.Size(44, 50);
+            this.ic_prov.TabIndex = 21;
+            this.ic_prov.UseVisualStyleBackColor = true;
+            this.ic_prov.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.AllowDrop = true;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(396, 0);
+            this.button9.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(44, 50);
+            this.button9.TabIndex = 20;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            // 
+            // button8
+            // 
+            this.button8.AllowDrop = true;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(352, 0);
+            this.button8.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(44, 50);
+            this.button8.TabIndex = 19;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            // 
+            // button7
+            // 
+            this.button7.AllowDrop = true;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(308, 0);
+            this.button7.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(44, 50);
+            this.button7.TabIndex = 18;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.AllowDrop = true;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(264, 0);
+            this.button6.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(44, 50);
+            this.button6.TabIndex = 17;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.AllowDrop = true;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(220, 0);
+            this.button5.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(44, 50);
+            this.button5.TabIndex = 16;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.AllowDrop = true;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(176, 0);
+            this.button4.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(44, 50);
+            this.button4.TabIndex = 15;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.AllowDrop = true;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(132, 0);
+            this.button3.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(44, 50);
+            this.button3.TabIndex = 14;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.AllowDrop = true;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(88, 0);
+            this.button2.MinimumSize = new System.Drawing.Size(30, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(44, 50);
+            this.button2.TabIndex = 13;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(50)))), ((int)(((byte)(200)))));
+            this.panel1.Location = new System.Drawing.Point(44, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(45, 3);
+            this.panel1.TabIndex = 11;
+            this.panel1.Visible = false;
+            // 
+            // ic_reg_invent
+            // 
+            this.ic_reg_invent.AllowDrop = true;
+            this.ic_reg_invent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ic_reg_invent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ic_reg_invent.FlatAppearance.BorderSize = 0;
+            this.ic_reg_invent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.ic_reg_invent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ic_reg_invent.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ic_reg_invent.ForeColor = System.Drawing.Color.White;
+            this.ic_reg_invent.Image = ((System.Drawing.Image)(resources.GetObject("ic_reg_invent.Image")));
+            this.ic_reg_invent.Location = new System.Drawing.Point(44, 0);
+            this.ic_reg_invent.MinimumSize = new System.Drawing.Size(30, 50);
+            this.ic_reg_invent.Name = "ic_reg_invent";
+            this.ic_reg_invent.Size = new System.Drawing.Size(44, 50);
+            this.ic_reg_invent.TabIndex = 12;
+            this.ic_reg_invent.UseVisualStyleBackColor = true;
+            this.ic_reg_invent.Visible = false;
+            // 
+            // pnl_led_pv
+            // 
+            this.pnl_led_pv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(50)))), ((int)(((byte)(200)))));
+            this.pnl_led_pv.Location = new System.Drawing.Point(0, 47);
+            this.pnl_led_pv.Name = "pnl_led_pv";
+            this.pnl_led_pv.Size = new System.Drawing.Size(44, 3);
+            this.pnl_led_pv.TabIndex = 3;
+            this.pnl_led_pv.Visible = false;
+            // 
+            // btn_inf_pv
+            // 
+            this.btn_inf_pv.AllowDrop = true;
+            this.btn_inf_pv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_inf_pv.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_inf_pv.FlatAppearance.BorderSize = 0;
+            this.btn_inf_pv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
+            this.btn_inf_pv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inf_pv.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inf_pv.ForeColor = System.Drawing.Color.White;
+            this.btn_inf_pv.Image = ((System.Drawing.Image)(resources.GetObject("btn_inf_pv.Image")));
+            this.btn_inf_pv.Location = new System.Drawing.Point(0, 0);
+            this.btn_inf_pv.MinimumSize = new System.Drawing.Size(30, 50);
+            this.btn_inf_pv.Name = "btn_inf_pv";
+            this.btn_inf_pv.Size = new System.Drawing.Size(44, 50);
+            this.btn_inf_pv.TabIndex = 10;
+            this.btn_inf_pv.UseVisualStyleBackColor = true;
+            this.btn_inf_pv.Visible = false;
             // 
             // lbl_Hora
             // 
             this.lbl_Hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Hora.AutoSize = true;
             this.lbl_Hora.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Hora.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Hora.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_Hora.Location = new System.Drawing.Point(913, 9);
+            this.lbl_Hora.Location = new System.Drawing.Point(859, 10);
             this.lbl_Hora.Name = "lbl_Hora";
-            this.lbl_Hora.Size = new System.Drawing.Size(32, 13);
+            this.lbl_Hora.Size = new System.Drawing.Size(141, 15);
             this.lbl_Hora.TabIndex = 2;
             this.lbl_Hora.Text = "Hora";
+            this.lbl_Hora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Fecha
             // 
             this.lbl_Fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Fecha.AutoSize = true;
             this.lbl_Fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Fecha.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_Fecha.Location = new System.Drawing.Point(734, 9);
+            this.lbl_Fecha.Location = new System.Drawing.Point(859, 28);
             this.lbl_Fecha.Name = "lbl_Fecha";
-            this.lbl_Fecha.Size = new System.Drawing.Size(37, 13);
+            this.lbl_Fecha.Size = new System.Drawing.Size(141, 15);
             this.lbl_Fecha.TabIndex = 1;
             this.lbl_Fecha.Text = "Fecha";
+            this.lbl_Fecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel_Lateral
             // 
             this.panel_Lateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
             this.panel_Lateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Lateral.Location = new System.Drawing.Point(1200, 50);
+            this.panel_Lateral.Location = new System.Drawing.Point(1200, 53);
             this.panel_Lateral.Name = "panel_Lateral";
-            this.panel_Lateral.Size = new System.Drawing.Size(20, 630);
+            this.panel_Lateral.Size = new System.Drawing.Size(20, 647);
             this.panel_Lateral.TabIndex = 3;
             // 
             // pnl_Cabecera
@@ -219,7 +493,7 @@
             this.pnl_Cabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Cabecera.Location = new System.Drawing.Point(200, 0);
             this.pnl_Cabecera.Name = "pnl_Cabecera";
-            this.pnl_Cabecera.Size = new System.Drawing.Size(1020, 50);
+            this.pnl_Cabecera.Size = new System.Drawing.Size(1020, 53);
             this.pnl_Cabecera.TabIndex = 1;
             this.pnl_Cabecera.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Cabecera_MouseMove);
             // 
@@ -864,7 +1138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 680);
+            this.ClientSize = new System.Drawing.Size(1220, 700);
             this.Controls.Add(this.pnl_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -878,7 +1152,6 @@
             this.pnl_Formularios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.img_Logo)).EndInit();
             this.pnl_Pie.ResumeLayout(false);
-            this.pnl_Pie.PerformLayout();
             this.pnl_Cabecera.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.pnl_Menu.ResumeLayout(false);
@@ -946,5 +1219,19 @@
         private System.Windows.Forms.Panel pnl_DecSubConfi;
         private System.Windows.Forms.Panel pnl_DecSubClient;
         private System.Windows.Forms.Panel panel_Lateral;
+        private System.Windows.Forms.Panel pnl_led_pv;
+        private System.Windows.Forms.Button btn_inf_pv;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ic_reg_invent;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button ic_prov;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

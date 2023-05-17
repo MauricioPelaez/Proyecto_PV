@@ -24,12 +24,14 @@ namespace Proyecto_PV.Formularios
             Tabla();
         }
 
+
         #region Load
         private void GUI_Proveedores_Load(object sender, EventArgs e)
         {
             lbl_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
             DGV_Proveedores.ClearSelection();
             NRegistros();
+            Global.pest_prov = true;
         }
         #endregion
 
@@ -517,17 +519,12 @@ namespace Proyecto_PV.Formularios
         #region Cerrar Formulario
         private void btn_Volver_Click(object sender, EventArgs e)
         {
-            Global.pestaña = false;
+            Global.pest_prov = false;
             this.Close();
         }
 
-
-
-
-
-
-
         #endregion
- 
+
+        
     }
 }

@@ -15,5 +15,9 @@ namespace Proyecto_PV.Datos_Staticos
         internal static string id_proveedor { get; set; }
         internal static string id_producto { get; set; }
         internal static int camara { get; set; }
+
+
+        internal static bool pest_prov = false;
+        internal static bool pest_reg_inv = false;
     }
 }

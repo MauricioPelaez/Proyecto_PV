@@ -160,10 +160,8 @@ namespace Proyecto_PV.Views
                 else
                 {
 
-                    //GUI_Principal ventana = new GUI_Principal();
-                    //ventana.Show();
-                    Camara cam = new Camara();
-                    cam.Show();
+                    GUI_Principal main = new GUI_Principal();
+                    main.Show();
                     this.Close();
 
                     if (conexion.State == ConnectionState.Open)
